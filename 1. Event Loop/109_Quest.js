@@ -1,3 +1,4 @@
+// Chained Promises
 Promise.resolve().then(() => {
   console.log("Promise 1");
   return Promise.resolve();

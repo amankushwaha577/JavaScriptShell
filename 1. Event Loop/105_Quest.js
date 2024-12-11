@@ -1,3 +1,4 @@
+// Blocking code in a loop : The synchronous for loop blocks the event loop until it completes.
 setTimeout(() => console.log("setTimeout"), 0);
 
 for (let i = 0; i < 1000000000; i++) {}

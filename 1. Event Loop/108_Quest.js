@@ -1,3 +1,4 @@
+// Nested setTimeout
 setTimeout(() => {
   console.log("Timeout 1");
   setTimeout(() => console.log("Timeout 2"), 0);
