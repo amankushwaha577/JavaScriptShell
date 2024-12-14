@@ -8,6 +8,7 @@ const obj1 = {
 
 const obj2 = { name: 'Flipkart' };
 
+// Use call to call obj1's getName method with obj2 as this
 console.log(obj1.getName.call(obj2));
 
 // Output: "Flipkart undefined"

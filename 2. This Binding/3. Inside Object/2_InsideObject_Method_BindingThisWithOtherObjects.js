@@ -11,4 +11,4 @@ console.log(obj1.getName.call(obj2));
 
 // Output: 'Flipkart'
 
-// Explanation: Using call, we explicitly bind this to obj2.
+// Explanation: Using call, we explicitly bind 'this' of obj1 to obj2.
