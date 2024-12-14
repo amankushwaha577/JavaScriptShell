@@ -2,7 +2,7 @@
 console.log(this);
 
 
-// Output: undefined
+// 1. In browsers: undefined.
+// 2. In Node.js: {} (empty object).
 
-// Explanation: In strict mode, this in the global context is undefined.
 
