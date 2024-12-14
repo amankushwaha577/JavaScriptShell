@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Button Test</title>
+</head>
+<body>
+  <script>
+    const button = document.createElement('button');
+    button.textContent = 'Click me';
+    button.addEventListener('click',  ()=> {
+      console.log(this); // Logs the Window Object
+    });
+    document.body.appendChild(button);
+  </script>
+</body>
+</html>
+
+<!-- Output: Window
+
+Explanation: Arrow functions inherit this from the enclosing lexical scope, which is the global scope (window). -->
