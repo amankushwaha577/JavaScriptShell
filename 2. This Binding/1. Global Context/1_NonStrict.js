@@ -1,0 +1,8 @@
+console.log(this);
+
+// Output:
+
+// 1. In browsers: Window object.
+// 2. In Node.js: {} (empty object).
+//    Explanation: In the global execution context, this refers to the global object (window in browsers and global in Node.js). 
+//    In modules (Node.js), it is an empty object.
