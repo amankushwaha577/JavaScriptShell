@@ -1,3 +1,5 @@
+// In strict mode, when you use this in the global scope (outside of any function or object method), 
+// it does not refer to the global object (in Node.js, the global object).
 'use strict';
 console.log(this);
 
@@ -18,4 +20,9 @@ console.log(this);
 // Why {} (empty object)?
 // --------------------------------
 // In Node.js, strict mode behaves slightly differently when executed in the global scope (outside a function). 
-// Even in strict mode, this in the global context refers to the global object (but not the window object as in browsers).
+// In Node.js, each JavaScript file is treated as a module, and the this value inside a module is bound to the module.exports object, 
+// which is initially an empty object {}.  
+
+// So, even when you enable strict mode with 'use strict';, 
+// we are preventing this to refer global object (global in Node.js || global object ( Properties like setTimeout, setInterval, fetch)) 
+// but 'this' already having module.exports object in lexical scope so this is refering to module.exports object ( {} )
