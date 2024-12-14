@@ -6,3 +6,4 @@ console.log(this);
 // 2. In Node.js: {} (empty object).
 
 
+ 
