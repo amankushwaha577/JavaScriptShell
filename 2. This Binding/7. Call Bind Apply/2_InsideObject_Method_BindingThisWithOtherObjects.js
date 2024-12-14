@@ -1,7 +1,8 @@
 const obj1 = {
   name: 'Aman',
+  sname:'kushwaha',
   getName: function () {
-    return this.name;
+    return this.name + " "+ this.sname;
   },
 };
 
