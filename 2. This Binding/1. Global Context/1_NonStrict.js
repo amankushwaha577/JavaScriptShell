@@ -1,12 +1,10 @@
+// Explanation: In the global execution context, this refers to the global object (window in browsers and global in Node.js). 
 console.log(this);
 
 // Output:
 
 // 1. In browsers: Window object (Propertise like Audio Settings, GPU texture, Navigator).
 // 2. In Node.js:  Global object ({} (empty object)|| Module export object ).
-
-//    Explanation: In the global execution context, this refers to the global object (window in browsers and global in Node.js). 
-
 
 
 // ---------------------------------------------------------------------------------------------------------------------
