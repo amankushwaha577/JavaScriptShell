@@ -3,12 +3,13 @@ console.log(this);
 // Output:
 
 // 1. In browsers: Window object (Propertise like Audio Settings, GPU texture, Navigator).
-// 2. In Node.js:  Global object ({} (empty object)).
+// 2. In Node.js:  Global object ({} (empty object)|| Module export object ).
 
 //    Explanation: In the global execution context, this refers to the global object (window in browsers and global in Node.js). 
-//    In modules (Node.js), global object is an empty object.
 
-// /---------------------------------------------------------------------------------------------------------------------
+
+
+// ---------------------------------------------------------------------------------------------------------------------
 // In Node.js, console.log(this) can output {} because of how the this keyword behaves in different contexts.
 
 // Explanation:
@@ -17,7 +18,7 @@ console.log(this);
 //   However, it is not the global object (global) in Node.js like in the browser's global context where this refers to the window object.
 
 // 2. Modules in Node.js: In Node.js, every file is treated as a module, and this in the global context of a module refers to the exports object,
-//   which is initially an empty object ({}).
+//    which is initially an empty object ({}).
 
 // What happens when you run console.log(this):
 // In a regular Node.js module (not inside any function), this is bound to the exports object, which is an empty object initially: {}.
