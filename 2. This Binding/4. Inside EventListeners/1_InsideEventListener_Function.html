@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Button Test</title>
+</head>
+<body>
+  <script>
+    const button = document.createElement('button');
+    button.textContent = 'Click me';
+    button.addEventListener('click', function () {
+      console.log(this); // Logs the button element
+    });
+    document.body.appendChild(button);
+  </script>
+</body>
+</html>
+
+<!-- Output:    <button>Click me</button>   (The <button> element).
+
+Explanation: In event listeners, this refers to the element that triggered the event. 
+-->
