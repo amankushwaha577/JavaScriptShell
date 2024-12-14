@@ -26,3 +26,7 @@ console.log(this);
 // So, even when you enable strict mode with 'use strict';, 
 // we are preventing this to refer global object (global in Node.js || global object ( Properties like setTimeout, setInterval, fetch)) 
 // but 'this' already having module.exports object in lexical scope so this is refering to module.exports object ( {} )
+
+// Ye Non Strict mode mei to Global object tak ko refer nahi kar raha tha
+// To strict mode mei kis liye rokna ye already use refer nahi kar rhaha
+// Ye kewal mode.export oject ({}) ko refer kar raha hei to strict mode & non strict mode mei isi ko refer karega.
