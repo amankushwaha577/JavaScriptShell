@@ -33,3 +33,11 @@ function test() {
 //          }
 //          test();
 //       The function call test() doesn’t associate this with the module, so the default global object (global) is used instead.
+
+
+
+
+// Module-level this vs. Function-level this:
+// ----------------------------------------------
+// At the module level, this refers to module.exports.
+// Inside a function, this is determined by how the function is called, not by its enclosing module.
