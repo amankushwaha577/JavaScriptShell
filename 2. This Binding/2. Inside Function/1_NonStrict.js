@@ -40,4 +40,4 @@ function test() {
 // Module-level this vs. Function-level this:
 // ----------------------------------------------
 // At the module level, this refers to module.exports.
-// Inside a function, this is determined by how the function is called, not by its enclosing module.
+// Inside a function, this is determined  by how the function is called, not by its enclosing module.
