@@ -4,7 +4,7 @@ function test() {
 }
 test();
 
-// Output: undefined (in both )
+// Output: undefined (in both environment)
 
 // Explanation: In strict mode, this inside a function is undefined.
 

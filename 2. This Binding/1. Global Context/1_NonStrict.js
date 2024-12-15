@@ -21,3 +21,19 @@ console.log(this);
 // What happens when you run console.log(this):
 // In a regular Node.js module (not inside any function), this is bound to the exports object, which is an empty object initially: {}.
 // This is why when you run console.log(this) in the global scope of a Node.js script, it outputs {}.
+
+
+
+
+
+
+
+// -----------------------------Every JS file is wrapped in ---------------------------------------
+
+// This happens because the global context of the module is wrapped by Node.js in a function like this (conceptually):
+
+// (function(exports, require, module, __filename, __dirname) {
+//     // Your module's code
+// });
+
+// Thus, this at the top level of the module is implicitly set to module.exports.
