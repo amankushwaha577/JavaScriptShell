@@ -5,7 +5,7 @@ console.log(this);
 
 
 // 1. In browsers: undefined.
-// 2. In Node.js: {} (empty object) (aka object below Global object).
+// 2. In Node.js: {} (empty object) (aka explicit object below Global object).
 
 
 // 1. In Browsers:
