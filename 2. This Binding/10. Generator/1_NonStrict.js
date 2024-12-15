@@ -4,7 +4,7 @@ function* gen() {
 }
 gen().next();
 
-
+// Op: same like functions
 // In browsers: Window object.
 // In Node.js: global object (the global object in Node.js)..
 
