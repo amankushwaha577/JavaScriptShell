@@ -22,3 +22,14 @@ function test() {
 //         (function(exports, require, module, __filename, __dirname) {
 //                 Your module's code
 //          });
+
+// 2. this in Regular Functions
+//    A. When a regular function is executed in Node.js, it is not bound to the module’s scope or module.exports by default.
+//    B. Instead, the function’s this depends on how the function is called:
+//       If it’s called in the global context, this refers to the global object (global).
+//    C. This is consistent with JavaScript’s behavior in non-strict mode: Regular functions default to binding this to the global object.
+//          function test() {
+//            console.log(this); // In Node.js: Logs the global object
+//          }
+//          test();
+//       The function call test() doesn’t associate this with the module, so the default global object (global) is used instead.
