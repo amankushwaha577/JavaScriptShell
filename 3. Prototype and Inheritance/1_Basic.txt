@@ -1,0 +1,6 @@
+1. In JavaScript, every object has a special hidden property called [[Prototype]]
+2. And _proto_ provides reference to the prototype object. 
+
+Q. 1. What is a Prototype?
+Ans. A. A prototype acts as a blueprint for objects.
+     B. It allows objects to share properties and methods through inheritance.
