@@ -30,8 +30,8 @@ let obj1 = {
 //    => At the bottom of all elements you will get [[Prototype]]
 //       all those properties of Object will also be here ( Of Only Object )
 
-// 2. If you do arr1.__proto__ =>
+// 2. If you do obj1.__proto__ =>
 // ----------------------------------------------------------------
-//    => You will get all those ( Of Only Object ) properties in array form.
+//    => You will get all those ( Of Only Object ) properties in Object form.
 //       [.valueOf(), .toString(), .hasOwnProperty(), .isPrototypeOf() ......]
 
