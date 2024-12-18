@@ -5,7 +5,8 @@
 
 // 1. user.__proto__ => All Properties of Object.
 //    -------------------------------------------
-//    All our custom objects inherits properties of oject.prototype.
+user.__proto__   ===  Array.prototype
+// Whenever we create oject. It have prototype of Object
 
 
 
