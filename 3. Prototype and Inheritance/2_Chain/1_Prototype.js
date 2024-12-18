@@ -1,37 +1,27 @@
-let arr1= ["Aman", "kushwaha"]
-
-// 1. If you do arr1. =>
-// ---------------------------------------------------------------- 
-//    => You will get every single property of Array ( of Only Array )
-//       like .length, .map(), .filter(), .reduce()
-//    => At the bottom of all elements you will get [[Prototype]]
-//       all those properties of Array will also be here ( Of Only Array )
-
-// 2. If you do arr1.__proto__ =>
-// ----------------------------------------------------------------
-//    => You will get all those ( Of Only Array ) properties in array form.
-//       [.length, .map(), .filter(), .reduce(), ......]
-
-
-
-
-let obj1 = {
-    name : "Aman",
-    city: "Gurgaon",
-    getInfo : function (){
-        console.log(this.name + " from " + this.city);
-    }
+ let user = {
+    name: "aman",
+    sname:"kushwaha"
 }
 
-// 1. If you do obj1. =>
-// ---------------------------------------------------------------- 
-//    => You will get every single property of Object ( of Only Object )
-//       like .valueOf(), .toString(), .hasOwnProperty(), .isPrototypeOf()
-//    => At the bottom of all elements you will get [[Prototype]]
-//       all those properties of Object will also be here ( Of Only Object )
+// 1. user.__proto__ => All Properties of Object.
+//    -------------------------------------------
+//    All our custom objects inherits properties of oject.prototype.
 
-// 2. If you do obj1.__proto__ =>
-// ----------------------------------------------------------------
-//    => You will get all those ( Of Only Object ) properties in Object form.
-//       [.valueOf(), .toString(), .hasOwnProperty(), .isPrototypeOf() ......]
 
+
+// 2. Every data type at the end further inherit properties from Object.prototype 
+//    Function.prototype.__proto__    ===   Object.prototype  (true)
+//    Boolean.prototype.__proto__     ===   Object.prototype  (true)
+//    Object.prototype.__proto__      ===   null              (true)
+//    It's called prototype chaining.
+
+
+
+let arr1 = [1,2,3];
+arr1.__proto__                         // => Points to Array.prototype
+arr1.__proto__.__proto__               // => points to Object.prototype
+arr1.__proto__.__proto__.__proto__     // => points to null
+
+arr1.__proto__                       ===    Array.prototype            
+arr1.__proto__.__proto__             ===    Object.prototype    
+arr1.__proto__.__proto__.__proto__   ===    null 
