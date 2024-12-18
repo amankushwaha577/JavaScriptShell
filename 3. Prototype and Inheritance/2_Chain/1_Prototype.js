@@ -18,6 +18,9 @@
 
 
 let arr1 = [1,2,3];
+arr1.__proto__   ===  Array.prototype
+// Whenever we create array. It have prototype of Array
+
 arr1.__proto__                         // => Points to Array.prototype
 arr1.__proto__.__proto__               // => points to Object.prototype
 arr1.__proto__.__proto__.__proto__     // => points to null
