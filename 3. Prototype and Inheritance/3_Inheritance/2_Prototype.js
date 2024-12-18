@@ -11,4 +11,8 @@ function fun(){
 fun.__proto__.myBind() // Hi Aman
 // To access that method in our __proto__ of function
 
+fun.__proto__
+// Actually function dont gave properties in __proto__
+// op: ƒ () { [native code] }
+
 fun.myBind() // Hi Aman
