@@ -29,3 +29,9 @@ arr1.__proto__.__proto__.__proto__     // => points to null
 arr1.__proto__                       ===    Array.prototype            
 arr1.__proto__.__proto__             ===    Object.prototype    
 arr1.__proto__.__proto__.__proto__   ===    null 
+
+
+
+// ----------------------------------
+// JS have prototypical behavior it seraches properties from lower layer to upper layer until it found null
+// this keyword, classes and prototypical behaviour work on it.
