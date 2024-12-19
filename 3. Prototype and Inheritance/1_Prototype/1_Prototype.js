@@ -2,16 +2,16 @@ let arr1= ["Aman", "kushwaha"]
 
 // 1. If you do arr1. =>
 // ---------------------------------------------------------------- 
-//    => You will get every single property of Array ( of Only Array )
-//       like .length, .map(), .filter(), .reduce()
-//    => At the bottom of all elements you will get [[Prototype]]
-//       all those properties of Array will also be here ( Of Only Array )
+//    => You will get every single property of Array ( of Only Array ) like .length, .map(), .filter(), .reduce()                                
+//    => At the bottom of all elements you will get [[Prototype]] all those properties of Array will also be here ( Of Only Array )
 
 // 2. If you do arr1.__proto__ =>
 // ----------------------------------------------------------------
-//    => You will get all those ( Of Only Array ) properties in array form.
-//       [.length, .map(), .filter(), .reduce(), ......]
+//    => You will get all those ( Of Only Array ) properties in array form [.length, .map(), .filter(), .reduce(), ......]
 
+// 3. If you do Array.prototype =>
+// ----------------------------------------------------------------
+//    => You will get all those ( Of Only Array ) properties in array form [.length, .map(), .filter(), .reduce(), ......]
 
 
 
@@ -25,16 +25,33 @@ let obj1 = {
 
 // 1. If you do obj1. =>
 // ---------------------------------------------------------------- 
-//    => You will get every single property of Object ( of Only Object )
-//       like .valueOf(), .toString(), .hasOwnProperty(), .isPrototypeOf()
-//    => At the bottom of all elements you will get [[Prototype]]
-//       all those properties of Object will also be here ( Of Only Object )
+//    => You will get every single property of Object ( of Only Object ) like .valueOf(), .toString(), .hasOwnProperty(), .isPrototypeOf()
+//    => At the bottom of all elements you will get [[Prototype]] all those properties of Object will also be here ( Of Only Object )
 
 // 2. If you do obj1.__proto__ =>
 // ----------------------------------------------------------------
-//    => You will get all those ( Of Only Object ) properties in Object form.
-//       [.valueOf(), .toString(), .hasOwnProperty(), .isPrototypeOf() ......]
+//    => You will get all those ( Of Only Object ) properties in Object form [.valueOf(), .toString(), .hasOwnProperty(), .isPrototypeOf() ..]
 
+// 3. If you do Object.prototype =>
+// ----------------------------------------------------------------
+//    => You will get all those ( Of Only Object ) properties in Object form [.valueOf(), .toString(), .hasOwnProperty(), .isPrototypeOf() ..]
+
+
+
+function fun() {
+   return 7 
+}
+// 1. If you do fun. =>
+// ---------------------------------------------------------------- 
+//    => Function dont have their properties
+
+// 2. If you do fun.__proto__ =>
+// ----------------------------------------------------------------
+//    => Function dont have their properties so op : ƒ () { [native code] }
+
+// 3. If you do Function.prototype =>
+// ----------------------------------------------------------------
+//    => Function dont have their properties so op : ƒ () { [native code] }
 
 
 
