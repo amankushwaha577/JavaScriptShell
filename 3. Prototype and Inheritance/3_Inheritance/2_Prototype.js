@@ -12,7 +12,7 @@ fun.__proto__.myBind() // Hi Aman
 // To access that method in our __proto__ of function
 
 fun.__proto__
-// Actually function dont gives properties in __proto__
+// Actually function dont gives properties in __proto__ unlike other data types
 // so we will get op like -
 // op: ƒ () { [native code] }
 
