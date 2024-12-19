@@ -5,7 +5,7 @@
 
 // 1. user.__proto__ => All Properties of Object.
 //    -------------------------------------------
-user.__proto__   ===  Array.prototype
+user.__proto__   ===  Object.prototype
 // Whenever we create oject. It have prototype of Object
 
 
