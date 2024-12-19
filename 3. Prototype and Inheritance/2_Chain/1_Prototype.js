@@ -13,7 +13,7 @@ user.__proto__   ===  Object.prototype
 // 2. Every data type at the end further inherit properties from Object.prototype 
 //    Function.prototype.__proto__    ===   Object.prototype  (true)
 //    Boolean.prototype.__proto__     ===   Object.prototype  (true)
-//    Object.prototype.__proto__      ===   null              (true)
+//    Object.prototype.__proto__      ===   null              (true)    // Object dont have further parent
 //    It's called prototype chaining.
 
 
@@ -51,6 +51,6 @@ multiplyBy5.power = 2;
 console.log(multiplyBy5(5)); // 25
 console.log(multiplyBy5.power); // 2
 
-console.log(multiplyBy5.prototype); // It's "this" of multiplyBy5.prototype 
+console.log(multiplyBy5.prototype); // op: {} // It's "this" of multiplyBy5.prototype 
 console.log(arr1.prototype); // undefined
 console.log(user.prototype); // undefined
