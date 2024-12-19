@@ -35,3 +35,19 @@ arr1.__proto__.__proto__.__proto__   ===    null
 // ----------------------------------
 // JS have prototypical behavior it seraches properties from lower layer to upper layer until it found null
 // this keyword, classes and prototypical behaviour work on it.
+
+
+
+
+
+
+function multiplyBy5(num){
+    return num*5
+}
+
+// Functions are also objects.
+multiplyBy5.power = 2;
+
+console.log(multiplyBy5(5)); // 25
+console.log(multiplyBy5.power); // 2
+console.log(multiplyBy5.prototype); // It's "this" of multiplyBy5.prototype 
