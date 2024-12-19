@@ -55,6 +55,14 @@ function fun() {
 
 
 
+
+// -----------------------------Note For Understanding --------------------------------------------
+// BUt when you do arr1. / obj1. / fun. than you will get their property + Object properties
+// because every data type is also having  Object Prototype 
+// ----------------------------------------------------------------------------------------------- 
+
+
+
 // Q. 1. What is a Prototype?
 // Ans. In JavaScript, every object has a special hidden property called [[Prototype]]
 //      A prototype acts as a blueprint for objects.
