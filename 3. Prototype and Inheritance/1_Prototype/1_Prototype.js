@@ -35,3 +35,12 @@ let obj1 = {
 //    => You will get all those ( Of Only Object ) properties in Object form.
 //       [.valueOf(), .toString(), .hasOwnProperty(), .isPrototypeOf() ......]
 
+
+
+
+// Q. 1. What is a Prototype?
+// Ans. In JavaScript, every object has a special hidden property called [[Prototype]]
+//      A prototype acts as a blueprint for objects.
+
+// Q. 2. What is a _proto_?
+// Ans.  _proto_ provides reference to the prototype object. 
