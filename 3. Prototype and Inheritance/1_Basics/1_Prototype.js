@@ -1,3 +1,23 @@
+// Q. 1. What is a Prototype?
+// Ans. Whenever we create any var/object in JS, than JS engine attaches an object to our custom created object.
+//      this object contains set of properties that is called [[Prototype]] object.
+//      A prototype acts as a blueprint for objects.
+
+// Q. 2. What is a _proto_?
+// Ans.  To access that hidden object we uses property _proto_
+//       _proto_ provides reference to the prototype object. 
+
+
+// -------------------------------- Object Constructor----------------------------------------------------------
+Object // Op: ƒ Object() { [native code] }
+// Object is a built in Keyword
+
+Object.prototype // OP: LIST of object methods
+// Object keyword have proprty prototype which contains list of methods
+
+// So all our data type / all variables  whatever we create in JS internally inherits these properties
+// ------------------------------------------------------------------------------------------------------------
+
 let arr1= ["Aman", "kushwaha"]
 
 // 1. If you do arr1. =>
@@ -63,9 +83,3 @@ function fun() {
 
 
 
-// Q. 1. What is a Prototype?
-// Ans. In JavaScript, every object has a special hidden property called [[Prototype]]
-//      A prototype acts as a blueprint for objects.
-
-// Q. 2. What is a _proto_?
-// Ans.  _proto_ provides reference to the prototype object. 
