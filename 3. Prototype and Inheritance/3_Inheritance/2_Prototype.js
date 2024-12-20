@@ -3,16 +3,21 @@ Function.prototype.myBind = function(){
 }
 // HERE we have set 'myBind' method in "prototype of Function Constructor"
 
+fun.__proto__ === Function.prototype // true : chunki
+
+
+
 // Now all functions can acess myBind method
 function fun(){
 
 }
+// Now myBind() method will be available in __proto__ of all custom functions.
 
 fun.__proto__.myBind() // Hi Aman
 // To access that method in our __proto__ of function
 
 fun.__proto__
-// Actually function dont gives properties in __proto__ unlike other data types
+// We know Function prototype is also in form of function
 // so we will get op like -
 // op: ƒ () { [native code] }
 
