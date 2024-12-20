@@ -63,7 +63,8 @@ function fun() {
 }
 // 1. If you do fun. =>
 // ---------------------------------------------------------------- 
-//    => Function dont have their properties
+//    => You will get every single property of Function ( of Only Function ) like .name(), .call(), .apply(), .bind()
+//    => At the bottom of all elements you will get [[Prototype]] all those properties of Function will also be here ( Of Only Function )
 
 // 2. If you do fun.__proto__ =>
 // ----------------------------------------------------------------
