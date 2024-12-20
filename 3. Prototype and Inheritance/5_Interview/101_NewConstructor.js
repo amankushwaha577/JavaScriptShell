@@ -11,7 +11,7 @@ let c = "a"      // a.prototype => undefined
 console.log(new Person().__proto__); // Same as Person.prototype
 // Op : {}
 // Every custom function in JavaScript has a prototype property by default, which is an empty object ({}).
-// It is just like "newlyCreatedInstance.__proto__"
+// It is just like "newlyCreatedInstancefromPerson.__proto__"
 
 
 console.log(Person.prototype === new Person().__proto__); // true
