@@ -8,6 +8,8 @@
 //       _proto_ provides reference to the prototype object. 
 
 
+
+
 // -------------------------------- Object Constructor----------------------------------------------------------
 Object // Op: ƒ Object() { [native code] }
 // Object is a built in Keyword
@@ -17,6 +19,9 @@ Object.prototype // OP: LIST of object methods
 
 // So all our data type / all variables  whatever we create in JS internally inherits these properties
 // ------------------------------------------------------------------------------------------------------------
+
+
+
 
 let arr1= ["Aman", "kushwaha"]
 
@@ -32,6 +37,10 @@ let arr1= ["Aman", "kushwaha"]
 // 3. If you do Array.prototype =>
 // ----------------------------------------------------------------
 //    => You will get all those ( Of Only Array ) properties in array form [.length, .map(), .filter(), .reduce(), ......]
+
+arr1.__proto__ === Array.prototype // true
+// Set of Array Property === set of Array Property
+
 
 
 
@@ -55,6 +64,11 @@ let obj1 = {
 // 3. If you do Object.prototype =>
 // ----------------------------------------------------------------
 //    => You will get all those ( Of Only Object ) properties in Object form [.valueOf(), .toString(), .hasOwnProperty(), .isPrototypeOf() ..]
+
+obj1.__proto__ === Object.prototype // true
+// Set of Object Property === set of Object Property
+
+
 
 
 
