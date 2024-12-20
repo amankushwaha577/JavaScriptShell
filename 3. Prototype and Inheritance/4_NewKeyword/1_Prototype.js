@@ -58,3 +58,15 @@ console.log(user3)
 // undefined
 console.log(user3.score); 
 // Output: TypeError: Cannot read properties of undefined (reading 'score')
+
+
+
+
+
+
+// Points to Remember;;
+// 1. When new keyword initiates a new Objects creates.
+// 2. Newly created object gets liked to prototype property of constructor function.
+//    It means it will have now acccess to all properties of Constructor function.
+// 3. if constructor function does't return a non-primitive value(oject, array, function etc.)
+//    the newly created object is returned.
