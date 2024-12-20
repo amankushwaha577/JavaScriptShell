@@ -11,8 +11,17 @@ CreateUser.prototype.increment = function(){
     // Use `this.score` to refer to the `score` property of the current instance
 }
 
+CreateUser.prototype.Score = function(){
+    console.log(this.score);
+}
+
+console.log(CreateUser.prototype);
+// Object With Appended Properties.
+// Op: { increment: [Function (anonymous)], Score: [Function (anonymous)] }
+
+
 // Test the implementation
-const user1 = new CreateUser("Aman", 5);
+const user1 = new CreateUser("Aman", 5); 
 console.log(user1.score); // Output: 5
 
 user1.increment();
