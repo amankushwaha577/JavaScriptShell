@@ -82,11 +82,64 @@ function fun() {
 
 // 2. If you do fun.__proto__ =>
 // ----------------------------------------------------------------
-//    => Function dont have their properties so op : ƒ () { [native code] }
+//     => The Function.prototype itself is a function (technically, the function constructor), so its string representation is ƒ () { [native code] }.
+//     => However all properties like .name(), .call(), .apply(), .bind()] are there behind the scene
+//        so op : ƒ () { [native code] }
 
 // 3. If you do Function.prototype =>
 // ----------------------------------------------------------------
-//    => Function dont have their properties so op : ƒ () { [native code] }
+//     => The Function.prototype itself is a function (technically, the function constructor), so its string representation is ƒ () { [native code] }.
+//     => However all properties like .name(), .call(), .apply(), .bind()] are there behind the scene
+//        so op : ƒ () { [native code] }
+
+fun.__proto__ === Function.prototype // true
+// Set of Function Property === set of Function Property
+
+
+
+
+let str1 = "Hello, World!";
+
+// 1. If you do str1. =>
+// ---------------------------------------------------------------- 
+//    => You will get every single property of String (of Only String) like .length, .toUpperCase(), .toLowerCase(), .slice()                                
+//    => At the bottom of all elements, you will get [[Prototype]] where all those properties of String will also be present (of Only String).
+
+// 2. If you do str1.__proto__ =>
+// ----------------------------------------------------------------
+//    => You will get all those (of Only String) properties in object form like 
+//       [.length, .toUpperCase(), .toLowerCase(), .slice(), ......]
+
+// 3. If you do String.prototype =>
+// ----------------------------------------------------------------
+//    => You will get all those (of Only String) properties in object form like 
+//       [.length, .toUpperCase(), .toLowerCase(), .slice(), ......]
+
+str1.__proto__ === String.prototype // true
+// Set of String Properties === Set of String Properties
+
+
+
+
+let num1 = 42;
+// 1. If you do num1. =>
+// ---------------------------------------------------------------- 
+//    => You will get every single property of Number (of Only Number) like .toFixed(), .toExponential(), .toPrecision()                                
+//    => At the bottom of all elements, you will get [[Prototype]] where all those properties of Number will also be present (of Only Number).
+
+// 2. If you do num1.__proto__ =>
+// ----------------------------------------------------------------
+//    => You will get all those (of Only Number) properties in object form like 
+//       [.toFixed(), .toExponential(), .toPrecision(), ......]
+
+// 3. If you do Number.prototype =>
+// ----------------------------------------------------------------
+//    => You will get all those (of Only Number) properties in object form like 
+//       [.toFixed(), .toExponential(), .toPrecision(), ......]
+
+num1.__proto__ === Number.prototype // true
+// Set of Number Properties === Set of Number Properties
+
 
 
 
