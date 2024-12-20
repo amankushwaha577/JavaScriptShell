@@ -22,4 +22,5 @@ fun.__proto__
 // op: ƒ () { [native code] }
 
 fun.myBind() // Hi Aman
-// first it will try to acess __proto__ of fun. and here itself myBind is there so just stop here
+// First JS engine searches myBind in keys of fun object => Not Found
+// Now enters in __proto__. and here myBind is there so just stop here
