@@ -55,3 +55,17 @@ console.log(z); // Output: 10
 // B. const also requires a value to be initialized during its declaration. Failing to do so results in a SyntaxError.
 // C. Similar to let, const is hoisted but remains in the Temporal Dead Zone (TDZ) until its declaration is encountered. 
 //    Accessing it before declaration results in a ReferenceError.
+
+
+
+const obj = { a: 10 };
+obj.a = 20; // Allowed
+obj = { b: 30 }; // not Allowed
+
+// Answer:
+// ---------------
+// obj.a = 20: Allowed
+// const prevents reassignment of the variable itself, but the object it references is still mutable.
+
+// obj = { b: 30 }: TypeError
+// Reassigning the entire object is not allowed with const.
