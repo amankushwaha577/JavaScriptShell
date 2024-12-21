@@ -1,22 +1,23 @@
-var x = 10;
-let y = 20;
-const z = 30;
-
-console.log(window.x); // ?
-console.log(window.y); // ?
-console.log(window.z); // ?
-
-// 10
-// undefined
-// undefined
+function test() {
+    if (true) {
+      var a = 10;
+      let b = 20;
+      const c = 30;
+    }
+    console.log(a); // 10
+    console.log(b); // ReferenceError
+    console.log(c); // ReferenceError
+  }
+  test();
+  
 
 // Answer:
-// -------------
-// window.x: 10
-// Variables declared with var are attached to the window object in the browser.
+// ------------
+// console.log(a): 10
+// var is function-scoped, so it’s accessible throughout the function.
 
-// window.y: undefined
-// let does not create a property on the window object.
+// console.log(b): ReferenceError
+// let is block-scoped and not accessible outside the if block.
 
-// window.z: undefined
-// Same as let, const variables are not attached to the window object.
+// console.log(c): ReferenceError
+// const is also block-scoped, just like let.
