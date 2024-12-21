@@ -16,6 +16,10 @@ console.log(b);
 let b = 20;
 // OP: ReferenceError: Cannot access 'b' before initialization
 
+console.log(z);
+const z = 30;
+// OP: ReferenceError: Cannot access 'z' before initialization
+
 // Explanation:
 // let and const declarations are hoisted but remain in a "temporal dead zone" (TDZ) until their initialization. 
 // Accessing them before initialization results in a ReferenceError.
