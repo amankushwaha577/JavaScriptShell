@@ -219,6 +219,16 @@ console.log(![] == 0);   // true
 // D. When comparing a number and a string, JavaScript converts the string to a number. An empty string ('') is coerced to 0.
 //    0 == 0 //true
 
-
 // ![] == 0:
 // ![] evaluates to false, which is coerced to 0, so the comparison is 0 == 0, which is true.
+
+
+
+
+
+// Key Takeaways:
+// == allows type coercion (can lead to unexpected results).
+// === is stricter (preferred in most cases).
+// Objects and arrays are compared by reference, not by value.
+// Be cautious with type coercion and edge cases like NaN, null, undefined, and empty objects/arrays.
+
