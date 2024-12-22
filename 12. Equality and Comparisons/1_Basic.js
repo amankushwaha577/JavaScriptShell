@@ -102,3 +102,22 @@ console.log("0" == false); // true
 
 // "0" == false:
 // "0" is coerced to a number (0), and false is coerced to 0, so the comparison becomes 0 == 0, which is true.
+
+
+
+
+// 7. Empty Objects and Arrays
+console.log([] == 0);        // true
+console.log({} == 0);        // false
+console.log([] == ![]);      // true
+
+// Explanation:
+// [] == 0:
+// The empty array is coerced to an empty string (""), which is then coerced to 0.
+
+// {} == 0:
+// Objects are not coerced into numbers, so the result is false.
+
+// [] == ![]:
+// ![] evaluates to false( Since [] is truthy, applying ! flips it to false.)
+// [] == false becomes [] == 0, and the empty array is coerced to 0, so the result is true.
