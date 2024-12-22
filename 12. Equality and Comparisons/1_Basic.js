@@ -121,3 +121,35 @@ console.log([] == ![]);      // true
 // [] == ![]:
 // ![] evaluates to false( Since [] is truthy, applying ! flips it to false.)
 // [] == false becomes [] == 0, and the empty array is coerced to 0, so the result is true.
+
+
+
+
+// 8. Comparing Functions
+function a() {}
+function b() {}
+
+console.log(a == b);   // false
+console.log(a === b);  // false
+
+// Explanation:
+// Functions, like objects, are compared by reference.
+// a and b are two different instances, so they are not equal.
+
+
+
+
+// 9. true and Strings
+console.log(true == "1");  // true
+console.log(true === "1"); // false
+console.log(true == "true"); // false
+
+// Explanation:
+// true == "1":
+// true is coerced to 1, and "1" is coerced to 1, so the comparison becomes 1 == 1, which is true.
+
+// true === "1":
+// Strict equality fails because their types are different.
+
+// true == "true":
+// "true" is a string and cannot be coerced into 1, so the result is false.
