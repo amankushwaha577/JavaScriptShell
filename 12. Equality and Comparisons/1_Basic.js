@@ -36,3 +36,23 @@ console.log(null == 0);          // false
 // null == 0:
 // --------------
 // "Note" ==> According to JavaScript's specification, null is only loosely equal to undefined and no other value (not even 0).
+
+
+
+
+
+// 3. Quirks with NaN
+console.log(NaN == NaN);   // false
+console.log(NaN === NaN);  // false
+console.log(Number.isNaN(NaN)); // true
+
+// Explanation:
+// NaN == NaN and NaN === NaN:
+// By specification (IEEE 754), NaN (Not a Number) is not equal to anything, even itself.
+
+// Number.isNaN(NaN):
+// This method correctly checks if a value is NaN.
+
+
+
+
