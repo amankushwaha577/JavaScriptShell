@@ -195,3 +195,30 @@ console.log(Object.is(+0, -0)); // false
 // 13. Primitive Wrappers
 console.log(new String("test") == "test");  // true
 console.log(new String("test") === "test"); // false
+
+// Explanation:
+// ==: The string object is coerced to its primitive value ("test"), so the comparison is true.
+// ===: Strict equality fails because one is an object and the other is a string.
+
+
+
+
+// 14. Double Negatives
+console.log(![] == []);  // true
+console.log(![] == 0);   // true
+
+// Explanation:
+// ![] == []:
+// A. [] (an empty array) is truthy, so applying ! (logical NOT) makes it false,
+//    now=> false == []
+// B. When comparing a boolean (false) with an object (like []), JavaScript converts the boolean to a number: false is coerced to 0.
+//    now=> 0 == []
+// C. When comparing a number with an object (like []), JavaScript tries to convert the object to a primitive value.
+//    For an empty array ([]), the primitive value is an empty string ('').
+//    now=> 0 == ''
+// D. When comparing a number and a string, JavaScript converts the string to a number. An empty string ('') is coerced to 0.
+//    0 == 0 //true
+
+
+// ![] == 0:
+// ![] evaluates to false, which is coerced to 0, so the comparison is 0 == 0, which is true.
