@@ -18,3 +18,14 @@ console.log("" == false); // Output: true
 // "" (empty string) is a falsy value and is coerced to 0. 
 // false is also coerced to 0, so the comparison is 0 == 0.
 
+console.log(Boolean(0));  // Output: false
+console.log(Boolean(""));  // Output: false
+
+
+
+
+
+// ----------------------------------------
+// 1. NaN is not equal to any value, including itself.
+// 2. typeof null is "object", but typeof undefined is "undefined".
+
