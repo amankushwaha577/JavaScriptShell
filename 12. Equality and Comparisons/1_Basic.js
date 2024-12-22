@@ -83,3 +83,22 @@ console.log(arr1.toString() === arr2.toString()); // true
 
 // arr1.toString() === arr2.toString():
 // The .toString() method converts arrays to comma-separated strings, so arr1 and arr2 become "1,2,3", which are equal.
+
+
+
+
+// 6. Weirdness with 0 and false
+console.log(0 == false);   // true
+console.log(0 === false);  // false
+console.log("0" == false); // true
+
+// Explanation:
+// 0 == false:
+// false is coerced to 0, so the comparison becomes 0 == 0, which is true.
+
+// 0 === false:
+// Strict equality checks both type and value.
+// 0 (number) is not equal to false (boolean), so the result is false.
+
+// "0" == false:
+// "0" is coerced to a number (0), and false is coerced to 0, so the comparison becomes 0 == 0, which is true.
