@@ -56,3 +56,30 @@ console.log(Number.isNaN(NaN)); // true
 
 
 
+// 4. Comparing Objects
+const obj1 = { a: 1 };
+const obj2 = { a: 1 };
+console.log(obj1 == obj2);  // false
+console.log(obj1 === obj2); // false
+
+// Explanation:
+// Objects are compared by reference, not by value.
+// Even if obj1 and obj2 have the same content, they are stored in different memory locations, so their references are not equal.
+
+
+
+
+// 5. Comparing Arrays
+const arr1 = [1, 2, 3];
+const arr2 = [1, 2, 3];
+console.log(arr1 == arr2);  // false
+console.log(arr1 === arr2); // false
+console.log(arr1.toString() === arr2.toString()); // true
+
+// Explanation:
+// arr1 == arr2 and arr1 === arr2:
+// Arrays, like objects, are compared by reference.
+// Since arr1 and arr2 are different instances, their references are not equal.
+
+// arr1.toString() === arr2.toString():
+// The .toString() method converts arrays to comma-separated strings, so arr1 and arr2 become "1,2,3", which are equal.
