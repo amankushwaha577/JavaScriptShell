@@ -1,0 +1,93 @@
+const obj = { a: 1 };
+Object.freeze(obj);
+obj.a = 2;
+console.log(obj.a); // Output: 1
+
+// Explanation:
+// -----------------
+// Object.freeze() makes the object immutable. 
+// Any attempts to modify its properties are ignored in strict mode or fail silently otherwise.
+
+
+const arr = [1, 2, 3];
+const newArr = [...arr, 4];
+console.log(arr); // Output: [1, 2, 3]
+console.log(newArr); // Output: [1, 2, 3, 4]
+
+// Explanation:
+// -----------------
+// The spread operator ...arr creates a shallow copy of arr. 
+// Modifying newArr does not affect the original arr.
+
+
+const obj = { a: 1 };
+const copy = { ...obj };
+copy.a = 2;
+console.log(obj.a); // Output: 1
+console.log(copy.a); // Output: 2
+
+// Explanation:
+// --------------------
+// The spread operator creates a shallow copy of obj. 
+// Changes to copy do not affect the original obj.
+
+
+const obj1 = { a: { b: 1 } };
+const obj2 = { ...obj1 };
+obj2.a.b = 2;
+console.log(obj1.a.b); // Output: 2
+
+// Explanation:
+// ---------------------
+// The spread operator only creates a shallow copy. 
+// Nested objects (e.g., obj1.a) are still referenced, so changes to obj2.a.b also affect obj1.a.b.
+
+
+const obj = {};
+console.log(obj.toString()); // Output: [object Object]
+
+// Explanation:
+// ---------------------
+// The default toString() method in Object.prototype returns a string in the format:
+// [object Object]
+// A. The first object indicates that it is an object.
+// B. The second Object is the internal [[Class]] property of the object (now standardized as [[Prototype]] or its constructor).
+
+
+
+
+
+// ========================================================================
+// Common Pitfalls to Practice:
+// ========================================================================
+
+const { x = 10, y = 20 } = { x: 5 };
+console.log(x); // Output: 5
+console.log(y); // Output: 20
+
+// Explanation:
+// ---------------------
+// 1. Destructuring Syntax:
+// Extract the x property from the object.
+// If x is not present or is undefined, use the default value 10.
+// Extract the y property from the object.
+// If y is not present or is undefined, use the default value 20.
+
+// 2. Input Object:
+// The object being destructured is { x: 5 }.
+// It has a property x with the value 5, but it does not have a property y.
+
+// 3. Execution:
+// x is found in the object with a value of 5, so the default value 10 is ignored. The value of x becomes 5.
+// y is not found in the object, so the default value 20 is used. The value of y becomes 20.
+
+// Key Points to Remember:
+// 1. Default values are only used when the property is ""missing or undefined"".
+const { a = 42 } = { a: undefined };
+console.log(a); // Output: 42 (default value used)
+
+const { b = 42 } = { b: null };
+console.log(b); // Output: null (default value ignored)
+
+
+
