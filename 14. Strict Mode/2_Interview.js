@@ -26,7 +26,7 @@ console.log(obj.x);
 function greet(name, name) {
    console.log(`Hello ${name}`);
 }
-greet("Ananya", "World"); 
+greet("Aman", "World"); 
 // SyntaxError: Duplicate parameter name not allowed in this context
 
 

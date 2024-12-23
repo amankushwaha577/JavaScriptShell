@@ -5,7 +5,7 @@ function greet(name = "Guest") {
   return `Hello, ${name}!`;
 }
 console.log(greet()); // Output: "Hello, Guest!"
-console.log(greet("Ananya")); // Output: "Hello, Ananya!"
+console.log(greet("Aman")); // Output: "Hello, Aman!"
 
 // 2. Rest Parameters
 // Allows a function to accept an indefinite number of arguments as an array.
