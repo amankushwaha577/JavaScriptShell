@@ -27,7 +27,7 @@ console.log(a); // Output: 10
 
 "use strict";
 var b = 20;
-delete b; // throws a TypeError in strict mode
+delete b; // throws a SyntaxError in strict mode
 console.log(b); // It will not execute
 
 var globalVar = 100;
