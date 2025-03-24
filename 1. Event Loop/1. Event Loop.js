@@ -9,6 +9,7 @@ a. Browser has JS engine. JS engine have callstack.
 1. Call Stack (Execution Stack) : a). Keeps track of function calls.
                                   b). If a function calls another function, it gets pushed onto the stack; 
                                                                             when finished, it gets popped off.
+                                      The Call Stack manages execution contexts in a Last In, First Out (LIFO) order.
                                   c). Executes synchronous code line by line.
 
 

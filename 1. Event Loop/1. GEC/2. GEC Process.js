@@ -40,3 +40,44 @@ greet();  // "Hello!"
 
 2. When all code is executed, the Global Execution Context is popped off the stack.
 */
+
+
+/*
+Global Execution Context (GEC) is created:
+   1. Call Stack:  
+   ---------------  
+   |  GEC        |  
+   ---------------  
+
+   2. Memory Allocation Phase: 
+      - `x` is hoisted with `undefined`.  
+      - `greet` function is stored in memory as a reference.  
+
+   3. Execution Phase starts**  
+
+        → `console.log(x);` executes (outputs `undefined`)  
+        ---------------  
+        |  GEC        |  
+        ---------------  
+
+        → `x = 10;` (Variable is assigned a value)  
+        ---------------  
+        |  GEC        |  
+        ---------------  
+
+        → `greet()` is called → New Execution Context is pushed  
+        ---------------      ---------------  
+        |  GEC        |  ->  | greet EC    |  
+        ---------------       ---------------  
+                              |  GEC        |  
+                              ---------------  
+
+        → Inside `greet()`, `console.log("Hello!");` executes (outputs `"Hello!"`)  
+
+        → `greet()` finishes → Execution Context is popped  
+        ---------------  
+        |  GEC        |  
+        ---------------  
+
+   4. All code is executed, GEC is popped off the stack
+*/
