@@ -40,3 +40,8 @@ console.log("Global End");
                 |
                 |----> All code is executed, GEC is popped off the Call Stack.
 */
+
+/*
+Here Pushed means, Pushed in CallStack.
+The Call Stack manages execution contexts in a Last In, First Out (LIFO) order.
+*/
