@@ -5,11 +5,15 @@ Since JavaScript is single-threaded, it uses the event loop to manage asynchrono
 
     a. Browser has JS engine. JS engine have callstack. Inside Callbacks program ( GEC ) runs.
     b. When Asyc code comes in GEC, It is moved to "Web API Environment".
-       All the Asyn functions or operations are moved in "Web API Environment" and browser waits them too complete.
+       The Web API environment keeps track of the timer in the background.
+       Once the async task (e.g., a timer, network request) is completed, the Web API Environment moves it to the Callback Queue/Micro Task Queue.
+
        Ex : There is a timer of 5sec.
-            After 5 sec it will be moved in Callback  Queue.
+            The Web API keeps track of the timer in the background.
+            After its completion of 5 sec the Web API Environment moves it to the Callback Queue.
+
     c. Now here comes picture of Event Loop.
-       On the basis of Priority Event Loop put the task from Queue to Callstack.
+       On the basis of Priority Event Loop put the task from either [Micro Task Queue or Callback Queue] to Callstack.
 
 
                                     Asyn Code -------------(1)------------------
