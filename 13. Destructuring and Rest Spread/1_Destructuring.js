@@ -59,7 +59,7 @@ console.log(c); // Output: 5
 
 const nestedArr = [[1, 2], [3, 4]];
 const [,[second]] = nestedArr;
-console.log(second); // Output: [3, 4]
+console.log(second); // Output: 3
 
 
 
