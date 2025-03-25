@@ -71,7 +71,7 @@ console.log(second); // Output: 3
 const obj5 = { a: 1, b: 2, c: 3 };
 const { r, ...rest } = obj5;
 console.log(r, rest);
-// OP: 1 { b: 2, c: 3 }
+// OP: undefined { a: 1, b: 2, c: 3 }
 
 const arr = [1, [2, 3], 4];
 const [first, [secondd], fourth] = arr;
