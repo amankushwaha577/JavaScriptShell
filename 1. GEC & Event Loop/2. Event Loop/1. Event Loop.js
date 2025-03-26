@@ -23,8 +23,8 @@ Since JavaScript is single-threaded, it uses the event loop to manage asynchrono
     ---------------                                                      ----------------
             ↑  (4)                   ---------------                          |
             ------------------------ |  Event Loop |                          |                                                                                                   
-                                     ---------------                          | (2)                                               
-                                            ↑  (3)                            |
+                                     ---------------                          | (2) [ After timer completion]                                            
+                                            ↑  (3)                            |     [ or after event trigger (eg. 'click')]
                         =========================================  <--------- |
                           Micro Task Queue ( Highest Prioirty )
                         =========================================
