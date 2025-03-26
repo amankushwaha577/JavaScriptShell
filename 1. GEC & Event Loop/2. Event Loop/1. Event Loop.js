@@ -14,6 +14,7 @@ Since JavaScript is single-threaded, it uses the event loop to manage asynchrono
 
     c. Now here comes picture of Event Loop.
        On the basis of Priority Event Loop put the task from either [Micro Task Queue or Callback Queue] to Callstack.
+       (if the call stack is empty)
 
 
                                     Asyn Code -------------(1)------------------
@@ -23,8 +24,10 @@ Since JavaScript is single-threaded, it uses the event loop to manage asynchrono
     ---------------                                                      ----------------
             ↑  (4)                   ---------------                          |
             ------------------------ |  Event Loop |                          |                                                                                                   
-                                     ---------------                          | (2) [ After timer completion]                                            
-                                            ↑  (3)                            |     [ or after event trigger (eg. 'click')]
+                    on the basis     ---------------                          | (2) [ After timer completion]                                            
+                    of priority             ↑  (3)                            |     [ or after event trigger (eg. 'click')]
+                                            ↑                                 |  
+                                            ↑                                 |  
                         =========================================  <--------- |
                           Micro Task Queue ( Highest Prioirty )
                         =========================================
@@ -64,5 +67,6 @@ Since JavaScript is single-threaded, it uses the event loop to manage asynchrono
 4. Microtask Queue :
 
             a. Contains tasks from Promises (.then(), catch(), finally()) and MutationObserver.
-            b. Always executed before the callback queue.
+            b. Once the call stack is empty, the event loop moves tasks from this queue to the stack.
+            c. Always executed before the callback queue.
 */
