@@ -11,7 +11,7 @@ second();
 console.log("Global End");
 
 /*
-1. **Global Execution Context (GEC) is created**
+1. The GEC is pushed onto the Call Stack when execution starts.
                 |
                 |----> Memory Allocation Phase:
                 |        first = function reference
@@ -46,41 +46,48 @@ Here Pushed means, Pushed in CallStack.
 The Call Stack manages execution contexts in a Last In, First Out (LIFO) order.
 
 
-Global Execution Context (GEC) is created**  
-   1. Call Stack:  
-   ---------------  
-   |  GEC        |  
-   ---------------  
+1. The GEC is pushed onto the Call Stack when execution starts.
+        1. Call Stack:  
+        ---------------  
+        |  GEC        |  
+        ---------------  
 
-   2. Memory Allocation Phase: 
-      - `second` function is stored in memory as a reference. 
-      - `first` function is stored in memory as a reference. 
+        2. Memory Allocation Phase: 
+           a. `first` function is stored in memory as a reference. 
+           b. `second` function is stored in memory as a reference. 
 
-   3. `second()` is called → New Execution Context is pushed  
-   ---------------      ---------------  
-   |  GEC        |  ->  | second EC   |  
-   ---------------       ---------------  
-                         |  GEC        |  
-                         ---------------  
 
-   4. `first()` is called inside `second()` → New Execution Context is pushed  
-   ---------------      ---------------      ---------------  
-   |  GEC        |  ->  | second EC   |  ->  | first EC    |  
-   ---------------       ---------------      ---------------  
-                         |  GEC        |      | second EC   |  
-                         ---------------      ---------------  
-                                              |  GEC        |  
-                                              ---------------  
+        3.  Execution Phase starts :
+        
+                → `second()` is called → New Execution Context is pushed  
+                                     ---------------  
+                                     | second EC   |  
+                ---------------      ---------------  
+                |  GEC        |  ->  |  GEC        |  
+                ---------------      ---------------  
 
-   5.`first()` finishes → Execution Context is popped  
-   ---------------      ---------------  
-   |  GEC        |  ->  | second EC   |  
-   ---------------       ---------------  
-                         |  GEC        |  
-                         ---------------  
+                → `first()` is called inside `second()` → New Execution Context is pushed  
 
-   6. `second()` finishes → `console.log("Global End")` runs, then GEC is popped 
-   ---------------  
-   |  GEC        |  
-   ---------------  
+                                                              ---------------
+                                                              | first EC    |        
+                                     ---------------          ---------------   
+                                     | second EC   |          | second EC   |  
+                ---------------      ---------------          ---------------   
+                |  GEC        |  ->  |  GEC        |     ->   |  GEC        |    
+                ---------------      ---------------          ---------------   
+
+
+                → `first()` finishes → Execution Context is popped  
+                                     ---------------  
+                                     | second EC   |  
+                ---------------      ---------------  
+                |  GEC        |  ->  |  GEC        |  
+                ---------------      ---------------  
+
+                → `second()` finishes → `console.log("Global End")` runs, then GEC is popped 
+                ---------------  
+                |  GEC        |  
+                ---------------  
+                
+2. All code is executed, GEC is popped off the stack
 */
