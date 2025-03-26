@@ -31,11 +31,11 @@ B. Execution Phase:
                                           c. Than it will be removed from GEC.
 
        ii). Now FUnction call come -----> a. It will be pushed to GEC + It will create another EC inside GEC. + It can have another calling function that will also create EC.
-                                                    |----> EC
-                                                    |----> EC
-                                             GEC----|     |------->EC
-                                                    |-----|
-                                                    |     |------->EC                           
+                                                    |
+                                                    |
+                                             GEC----|            |------->EC
+                                                    |----> EC--> |
+                                                    |            |------->EC                           
                                           b. It will execute show output
                                           c. Than it will be removed from GEC.
     
