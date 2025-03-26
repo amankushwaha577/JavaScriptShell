@@ -42,6 +42,9 @@ console.log("Global End");
 */
 
 /*
+Stack Representation :
+---------------------
+
 Here Pushed means, Pushed in CallStack.
 The Call Stack manages execution contexts in a Last In, First Out (LIFO) order.
 
