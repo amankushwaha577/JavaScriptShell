@@ -124,7 +124,7 @@ b. Since this code runs in the main module (not inside an I/O cycle), the order 
    It can vary depending on system latency.
 
     Possible Outputs:
-    1. If the setTimeout(0) callback is ready by the time the event loop reaches the check Phase:
+    1. If the setTimeout(0) callback is ready by the time the event loop reaches the timer Phase:
        OP:
             nextTick
             Promise
