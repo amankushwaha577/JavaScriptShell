@@ -23,7 +23,8 @@ Phases of Event Loop:
 2. I/O Callbacks Phase :
 ------------------------
         a. We have executed our timer callbacks now execute other callbacks, 
-           Now, Here I/O callbacks are executed (e.g., from network operations, file system operations).
+           Now, Here I/O callbacks are executed.
+        b. Handles errors from network requests, file operations, and other asynchronous tasks.
 
         const fs = require("fs");
 
@@ -37,16 +38,14 @@ Phases of Event Loop:
         a. Used internally by Node.js.
         b. Generally ignored in userland applications.
 
-4. Poll Phase
-        Retrieves new I/O events.
 
-        Executes I/O-related callbacks (excluding setImmediate()).
+4. Poll Phase  (Most Important Phase) :
+---------------------------------------
+        a. Handles incoming connections, network requests, and new events.
+        b. Executes all available I/O callbacks (except those scheduled in Check or Timers phases).
+        c. If there are no I/O tasks in the queue =>, it waits for new events 
+           if there are pending setImmediate() callbacks => it moves to the Check phase.
 
-        If there are no timers pending:
-
-        If the poll queue is not empty, execute all callbacks.
-
-        If the poll queue is empty, wait for new I/O events.
 
 5. Check Phase :
 ----------------
