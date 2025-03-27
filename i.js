@@ -22,10 +22,15 @@ const fs = require('fs');
 
 // console.log('Synchronous Code - Executed First');
 
+// setTimeout(() => console.log("setTimeout"), 0);
+// setImmediate(() => console.log("setImmediate"));
+// fs.readFile(__filename, () => {
+//   console.log("File read complete (Poll Phase)");
+// });
+// process.nextTick(() => console.log("nextTick"));
+// Promise.resolve().then(() => console.log("Promise"));
+
 setTimeout(() => console.log("setTimeout"), 0);
 setImmediate(() => console.log("setImmediate"));
-fs.readFile(__filename, () => {
-  console.log("File read complete (Poll Phase)");
-});
 process.nextTick(() => console.log("nextTick"));
 Promise.resolve().then(() => console.log("Promise"));
