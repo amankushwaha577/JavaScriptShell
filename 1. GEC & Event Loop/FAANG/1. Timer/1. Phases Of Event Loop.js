@@ -97,7 +97,77 @@ OP:
 
 
 
-a. process.nextTick() runs first.
-b. Microtasks (Promise.then()) run next.
-c. setTimeout(0) and setImmediate() execution order depends on whether the event loop is already in the poll phase.
+🔹 Step 1: Execute Microtasks (Before Event Loop Phases) :
+----------------------------------------------------------
+            Before starting any event loop phase, Node.js first executes microtasks:
+
+            process.nextTick(() => console.log("nextTick"));
+            Promise.resolve().then(() => console.log("Promise"));
+
+            ✅ Output so far:
+            nextTick
+            Promise
+
+🔹 Step 2: Enter the Timers Phase :
+------------------------------------
+            setTimeout(() => console.log("setTimeout"), 0);
+            setTimeout() is scheduled, but not executed yet.
+            We move to the next phase.
+
+            ✅ Output so far:
+            nextTick
+            Promise
+
+🔹 Step 3: I/O Callbacks Phase :
+--------------------------------
+            filesystem operations (like fs.readFile()) do not execute here. Instead, they are deferred to the Poll Phase.
+
+            ✅ No additional output yet.
+
+
+🔹 Step 4: Poll Phase :
+-----------------------
+            a. The poll phase executes file I/O operations.
+            b. fs.readFile(__filename, callback) completes, and its callback is added to the queue.
+            c. However, before executing it, the event loop checks if the poll queue is empty.
+
+               If the poll queue is empty, Node.js jumps to the Check Phase before executing timers!
+
+            ✅ No additional output yet.
+
+
+🔹 Step 5: Check Phase :
+------------------------
+            a. Executes setImmediate(() => console.log("setImmediate"));
+            b. Since setImmediate() is executed before the poll phase continues, it prints first.
+
+            ✅ Output so far:
+            nextTick
+            Promise
+            setImmediate
+
+
+🔹 Step 1: Timers Phase :
+------------------------
+            Now we return to the timers phase to execute setTimeout().
+            Executes console.log("setTimeout");.
+
+            ✅ Output so far:
+            nextTick
+            Promise
+            setImmediate
+            setTimeout
+
+🔹 Step 2: Poll Phase (Process I/O Callbacks) :
+-----------------------------------------------
+            Finally, the event loop goes back to the poll phase and executes the fs.readFile() callback.
+
+            ✅ Output so far:
+            nextTick
+            Promise
+            setImmediate
+            setTimeout
+            File read complete (Poll Phase)
+
+
 */
