@@ -19,12 +19,14 @@ console.log("F");
 // B
 // C
 
-// Synchronous code executes first: console.log("A") and console.log("F").
+/*
+1. Synchronous code executes first: console.log("A") and console.log("F").
 
-// The micro-tasks are executed next:
-// console.log("D")
-// Nested Promise (console.log("E")).
+2. The micro-tasks are executed next:
+    console.log("D")
+    Nested Promise (console.log("E")).
 
-// The macro-tasks are executed:
-// setTimeout for console.log("B").
-// Nested setTimeout for console.log("C").
+3. The macro-tasks are executed:
+    setTimeout for console.log("B").
+    Nested setTimeout for console.log("C").
+*/

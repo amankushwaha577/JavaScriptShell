@@ -14,8 +14,10 @@ Promise.resolve().then(() => console.log("Promise 2"));
 // Timeout 2
 // Promise inside Timeout 2
 
-// Micro-tasks (Promise.then) are executed before any pending macro-tasks (setTimeout).
-// Promise 1 and Promise 2 are resolved first.
+/*
+1. Micro-tasks (Promise.then) are executed before any pending macro-tasks (setTimeout).
+   Promise 1 and Promise 2 are resolved first.
 
-// Then Timeout 1 executes.
-// Next, Timeout 2 executes, and its nested Promise is queued in the micro-task queue, which runs immediately after Timeout 2.
+2. Then Timeout 1 executes.
+3. Next, Timeout 2 executes, and its nested Promise is queued in the micro-task queue, which runs immediately after Timeout 2.
+*/
