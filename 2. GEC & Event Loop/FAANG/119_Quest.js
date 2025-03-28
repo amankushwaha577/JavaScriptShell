@@ -12,6 +12,9 @@ Promise.resolve().then(() => {
 
 console.log("End");
 
-// End, Promise 1, Promise 2 (synchronous + micro-tasks) execute first.
-// Timeout 1, then Timeout 2 (macro-tasks) execute.
 // Output: End, Promise 1, Promise 2, Timeout 1, Timeout 2.
+
+/*
+1. End, Promise 1, Promise 2 (synchronous + micro-tasks) execute first.
+2. Timeout 1, then Timeout 2 (macro-tasks) execute.
+*/

@@ -10,7 +10,9 @@ async function test() {
   Promise.resolve().then(() => console.log("Promise"));
   console.log("End");
   
-
-//   Synchronous (Start, Async Start, End) runs first.
-// Then Async End and Promise (micro-tasks) execute.
 // Output: Start, Async Start, End, Async End, Promise.
+
+/*
+1. Synchronous (Start, Async Start, End) runs first.
+2. Then Async End and Promise (micro-tasks) execute.
+*/

@@ -1,12 +1,14 @@
-// Long-running setTimeout
-setTimeout(() => console.log("Timeout 1"), 1000);
-setTimeout(() => console.log("Timeout 2"), 0);
+// process.nextTick (Node.js)
+process.nextTick(() => console.log("Next Tick"));
+Promise.resolve().then(() => console.log("Promise"));
+setTimeout(() => console.log("Timeout"), 0);
 console.log("End");
 
+// Output: End, Next Tick, Promise, Timeout.
 
-// Explanation:
-// End executes first.
-// Timeout 2 executes after the shortest delay.
-// Timeout 1 executes after 1000ms.
+/*
+1. process.nextTick has higher priority than Promises in Node.js.
+2. Order: End, Next Tick, Promise, Timeout.
+*/
 
-// Output: End, Timeout 2, Timeout 1.
+
