@@ -12,8 +12,10 @@ async function test() {
   test();
   console.log("End");
 
-  
-// Synchronous code (Start, Async 1, End) executes first.
-// Each await defers subsequent code to a micro-task.
 
 // Output: Start, Async 1, End, Async 2, Async 3.
+
+/*
+1. Synchronous code (Start, Async 1, End) executes first.
+2. Each await defers subsequent code to a micro-task.
+*/

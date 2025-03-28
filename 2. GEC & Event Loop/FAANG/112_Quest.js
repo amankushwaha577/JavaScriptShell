@@ -10,7 +10,9 @@ Promise.resolve().then(() => {
 
 console.log("End");
 
-
-// End executes first.
-// Both Promise 1 and Promise 2 execute before Timeout.
 // Output: End, Promise 1, Promise 2, Timeout.
+
+/*
+1. End executes first.
+2. Both Promise 1 and Promise 2 execute before Timeout.
+*/

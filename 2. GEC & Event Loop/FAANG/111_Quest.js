@@ -10,8 +10,9 @@ test();
 console.log("End");
 
 
-// Explanation:
-// Synchronous code (Start, Async 1, End) runs first.
-// await pauses, allowing Async 2 to execute later as a micro-task.
-
 // Output: Start, Async 1, End, Async 2.
+
+/*
+1. Synchronous code (Start, Async 1, End) runs first.
+2. The await adds the continuation (console.log("Async 2")) to the micro-task queue.
+*/

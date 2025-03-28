@@ -11,8 +11,11 @@ Promise.resolve().then(() => {
   Promise.resolve().then(() => console.log("Promise 3"));
 });
 
-
-// Explanation:
-// All micro-tasks (Promise 1, Promise 2, Promise 3) run before macro-tasks (Timeout 1, Timeout 2).
-
 // Output: Promise 1, Promise 2, Promise 3, Timeout 1, Timeout 2.
+
+
+/*
+1. All micro-tasks (Promise 1, Promise 2, Promise 3) run before macro-tasks (Timeout 1, Timeout 2).
+2. Timeout 1 comes first so executed first. than Timeout 2
+*/
+
