@@ -18,6 +18,7 @@ console.log("script end");
 // promise2
 // setTimeout
 
-
-// console.log("script start") and console.log("script end") run synchronously.
-// Promise.then callbacks (promise1 and promise2) are micro-tasks and run before setTimeout (macro-task).
+/*
+1. console.log("script start") and console.log("script end") run synchronously.
+2. Promise.then callbacks (promise1 and promise2) are micro-tasks and run before setTimeout (macro-task).
+*/
