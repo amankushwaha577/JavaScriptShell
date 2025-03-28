@@ -18,6 +18,8 @@ console.log(5);
 // 4
 // 2
 
-// console.log(1), console.log(3), and console.log(5) run synchronously.
-// The await adds the continuation (console.log(4)) to the micro-task queue.
-// Micro-tasks (console.log(4)) are executed before the macro-task (setTimeout).
+/*
+1. console.log(1), console.log(3), and console.log(5) run synchronously.
+2. The await adds the continuation (console.log(4)) to the micro-task queue.
+3. Micro-tasks (console.log(4)) are executed before the macro-task (setTimeout).
+*/

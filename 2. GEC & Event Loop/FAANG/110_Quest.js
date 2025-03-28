@@ -8,6 +8,10 @@ Promise.resolve().then(() => {
 
 Promise.resolve().then(() => console.log("Promise 2"));
 
-// Promises (Promise 1 and Promise 2) execute before setTimeout (Timeout 1).
-// Timeout 2 runs after Timeout 1.
 // Output: Promise 1, Promise 2, Timeout 1, Timeout 2.
+
+/*
+1. Promises (Promise 1 and Promise 2) execute before setTimeout.
+2. Timeout 1 comes before Timeout 2 in code
+   so Timeout 1 run before Timeout 2.
+*/
