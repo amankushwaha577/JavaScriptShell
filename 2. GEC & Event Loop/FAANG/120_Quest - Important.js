@@ -19,5 +19,8 @@ Promise.resolve().then(() => {
 
 /*
 1. Promises execute (Promise 1), 
-2. then Timeout 1, Timeout 3, Promise 2, Timeout 2.
+2. then Timeout 1, 
+3. Timeout 3, Promise 2, 
+4. Timeout 2.
+
 */
