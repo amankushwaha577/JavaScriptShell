@@ -61,4 +61,18 @@ async function getValue() {
 
 getValue() // <Pomise> It will not be a normal value, It will be a Promise.
 getValue().then(console.log); // 42
+
+
+
+/* Note :Await with Non-Promise Values : await works with any value, resolving non-promise values to themselves. */
+(async function () {
+  try {
+      return await 10;
+  } catch (error) {
+      console.log("Caught:", error.message);
+  }
+})().then((result) => console.log("Result:", result));
+// Output: Result: 10
+
+
   
