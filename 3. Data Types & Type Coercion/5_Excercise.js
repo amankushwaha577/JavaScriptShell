@@ -14,26 +14,8 @@ console.log(3 > 2 > 1); // Output: false
 // Next, true is coerced to 1 (since true is treated as 1 in numeric contexts).
 // The expression becomes 1 > 1, which is false.
 
-console.log([] + []); // Output: ""
-// Explanation:
-// -------------
-// When the + operator is used with non-numeric operands, JavaScript converts them to strings (or concatenates them).
-// Both [] are empty arrays, which are coerced to empty strings ("") during string conversion.
-// The concatenation of two empty strings is "".
 
-console.log(+[]); // Output: 0
-// Explanation:
-// -------------
-// The unary + operator attempts to convert its operand to a number.
-// [] (empty array) is coerced to an empty string ("").
-// The empty string is then converted to the number 0 by the unary + operator.
 
-console.log([] == ""); // Output: true
-// Explanation:
-// -------------
-// The == operator performs type coercion to compare values.
-// The empty array [] is coerced to an empty string ("") when compared with a string.
-// Since both sides are now empty strings, the comparison "" == "" evaluates to true.
 
 
 // Summary of Key Concepts:

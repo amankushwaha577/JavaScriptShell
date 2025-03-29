@@ -31,3 +31,10 @@ A. a. Unary + does nothing : + simply converts the operand into a number (but -4
 
 console.log(5 + undefined);  // Output?
 // undefined cannot be converted into a meaningful number, so the result is NaN (Not-a-Number).
+
+
+console.log(+[]); // Output: 0
+// The unary + operator attempts to convert its operand to a number.
+// [] (empty array) is coerced to an empty string ("").
+// The empty string is then converted to the number 0 by the unary + operator.
+
