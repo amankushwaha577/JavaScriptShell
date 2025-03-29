@@ -1,8 +1,10 @@
-const fs = require('fs');
-
-fs.readFile(__filename, () => {  // I/O operation (Poll Phase)
-  setTimeout(() => console.log("setTimeout"), 0);
-  setImmediate(() => console.log("setImmediate"));
-  process.nextTick(() => console.log("nextTick"));
-  Promise.resolve().then(() => console.log("Promise"));
-});
+async function fetchData() {
+  try {
+    let response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+    let data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+fetchData();
