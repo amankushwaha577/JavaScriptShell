@@ -9,10 +9,19 @@ Few Notes :
 1. By specification (IEEE 754), NaN is not equal to any value, including itself.
 2. typeof null is "object", but typeof undefined is "undefined".
 3. According to JavaScript's specification, null is only loosely equal to undefined & itself and no other value (not even 0).
-4.   null   ==  undefined  =>  is true, 
+     null   ==  undefined  =>  is true, 
    KuchNahi ==   kuchNahi
 
-   null === undefined is false.
+   But, null === undefined is false.
+
+4. Objects, Functions, Arrays are compared by reference, not by value.
+5. Strings are compared by value, not by reference.They are primitive data types.
+   Always avoid new String(); use primitive strings instead. 
+
+6. Falsy Values in JavaScript: These values are considered false when used in a Boolean context.
+                               a. false, 0, ""
+                               b. null, undefined, NaN
+                               c. document.all 
 
 */
 
@@ -216,9 +225,6 @@ console.log(null === undefined); // Output: false
    // Explanation:
    // When comparing an object to a string, the object is coerced to its string representation using .toString(), 
    // which for most objects is "[object Object]".
-
-
-
 
 
 // 10. +0 and -0
