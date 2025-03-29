@@ -1,8 +1,7 @@
 try {
-  console.log("Trying to execute...");
-  let data = fetch("https://example.com/api");  // Potential error
+  setTimeout(() => {
+    throw new Error("Timeout Error");
+  }, 0);
 } catch (error) {
-  console.error("Error fetching data:", error.message);
-} finally {
-  console.log("Execution completed.");
+  console.log("Caught:", error.message);
 }
