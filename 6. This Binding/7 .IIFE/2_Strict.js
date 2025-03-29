@@ -24,7 +24,7 @@
 
 
 
-0
+
 ( () => {  // Gloal context
     console.log(this);
   })();
