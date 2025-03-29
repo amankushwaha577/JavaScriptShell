@@ -22,10 +22,9 @@ var sub = function (a, b) {
 /*
 Hoisting with Arrow Functions:
 ------------------------------
-
 Arrow functions are treated like function expressions.*/
 
-console.log(sum(2, 3));
+console.log(sum(2, 3));  // sum = undefined
 var sum = (a, b) => a + b;
 // OP: TypeError: sum is not a function 
 
