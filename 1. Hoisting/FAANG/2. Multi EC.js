@@ -26,3 +26,9 @@ test = function () { // Function expression assigned here
 
 test(); // Function call
 
+/*
+Just for Learn :
+a. When any function (funtion declaration / function expression / Arrow function is called, a new function execution context is created. 
+b. here when test(); is called a new EC is created.
+*/
+
