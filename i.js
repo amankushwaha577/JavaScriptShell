@@ -1,10 +1,7 @@
-'use strict' // No Effect of strict mode on object's this
 const obj = {
     name: 'Aman',
-    getName: function () {
+    getName: () => {
       console.log(this.name);
-      console.log(this);
     },
   };
-  obj.getName();
-  
+obj.getName();
