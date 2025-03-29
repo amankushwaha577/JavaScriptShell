@@ -1,3 +1,55 @@
+/*
+1. Error Handling with try...catch :
+------------------------------------
+The try...catch block is used to handle synchronous errors in JavaScript. 
+
+a. try runs the code block and, if an error occurs, it jumps to catch.
+b. catch contains the logic to handle the error.
+c. finally is optional and executes after try or catch. */
+
+try {
+  // Code that may throw an error
+} catch (error) {
+  // Code to handle the error
+} finally {
+  // Optional block that runs regardless of whether an error occurred
+}
+
+
+/* 1. Basic Try-Catch :
+-----------------------
+OP : An error occurred: x is not defined */
+
+try {
+    let result = 10 / x;  // x is not defined (ReferenceError)
+} catch (error) {
+    console.error("An error occurred:", error.message);
+}
+
+   
+
+/* 2. Error Handling in Async/Await :
+-------------------------------------
+a. Inside the try block, await Promise.reject("Rejected!") is encountered.
+b. it throws the rejection reason ("Rejected!") as an error.
+c. The try block execution stops immediately after the rejection.
+   The next line (console.log(result);) is never executed.
+d. The catch block is triggered and logs "Caught: Rejected!".*/
+
+async function test() {
+  try {
+    const result = await Promise.reject("Rejected!");
+    console.log(result);
+  } catch (error) {
+    console.log("Caught:", error);
+  }
+}
+test();
+
+// OP: Caught: Rejected!
+
+
+
 try {
   setTimeout(() => {
     throw new Error("Timeout Error");
@@ -25,22 +77,6 @@ new Promise((resolve, reject) => {
 
 
 
-
-async function test() {
-  try {
-    const result = await Promise.reject("Rejected!");
-    console.log(result);
-  } catch (error) {
-    console.log("Caught:", error);
-  }
-}
-test();
-
-// OP: Caught: Rejected!
-
-// Explanation: When await encounters a rejected promise (in this case, Promise.reject("Rejected!")), 
-//              it throws the rejection reason as an error and stops execution of the try block.
-// Since an error is thrown, the lines of code after the await statement in the try block (console.log(result)) are skipped.
 
 
 

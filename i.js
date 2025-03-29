@@ -1,10 +1,8 @@
-async function fetchData() {
-  try {
-    let response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
-    let data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.error("Error:", error);
-  }
+try {
+  console.log("Trying to execute...");
+  let data = fetch("https://example.com/api");  // Potential error
+} catch (error) {
+  console.error("Error fetching data:", error.message);
+} finally {
+  console.log("Execution completed.");
 }
-fetchData();

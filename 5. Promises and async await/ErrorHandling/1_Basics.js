@@ -1,6 +1,11 @@
-// 1. Error Handling with try...catch :
-// ------------------------------------
-// The try...catch block is used to handle synchronous errors in JavaScript.
+/*
+1. Error Handling with try...catch :
+------------------------------------
+The try...catch block is used to handle synchronous errors in JavaScript. 
+
+a. try runs the code block and, if an error occurs, it jumps to catch.
+b. catch contains the logic to handle the error.
+c. finally is optional and executes after try or catch.*/
 
 try {
   // Code that might throw an error
@@ -10,11 +15,22 @@ try {
   // (Optional) Code that always runs, regardless of success or failure
 }
 
-//  Important Points:
-//  -----------------------
-// try runs the code block and, if an error occurs, it jumps to catch.
-// catch contains the logic to handle the error.
-// finally is optional and executes after try or catch.
+
+
+try {
+  setTimeout(() => {
+    throw new Error("Timeout Error");
+  }, 0);
+} catch (error) {
+  console.log("Caught:", error.message);
+}
+
+// op : Uncaught Timeout Error
+
+// Explanation: try...catch cannot catch errors in asynchronous code. 
+//              The setTimeout callback executes after the try block has already exited.
+
+
 
 
 
