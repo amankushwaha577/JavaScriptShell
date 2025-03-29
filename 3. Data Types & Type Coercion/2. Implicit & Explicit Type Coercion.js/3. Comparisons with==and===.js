@@ -6,18 +6,25 @@ b. === (strict equality) does not allow type coercion (compares both value & typ
 
 Few Notes :
 ----------
-1. NaN is not equal to any value, including itself.
+1. By specification (IEEE 754), NaN is not equal to any value, including itself.
 2. typeof null is "object", but typeof undefined is "undefined".
-3.   null   ==  undefined  =>  is true, 
+3. According to JavaScript's specification, null is only loosely equal to undefined & itself and no other value (not even 0).
+4.   null   ==  undefined  =>  is true, 
    KuchNahi ==   kuchNahi
 
    null === undefined is false.
-4.
+
 */
 
 
 console.log(NaN === NaN); // Output: false
 // NaN is not equal to itself. Use Number.isNaN() to check for NaN
+
+console.log(NaN === NaN);  // false
+
+console.log(Number.isNaN(NaN)); // true : NaN is also not a number.
+// Number.isNaN(NaN): This method correctly checks if a value is NaN.
+
 
 console.log(typeof null); // Output: "object"
 // This is a historical bug in JavaScript. 
@@ -25,8 +32,17 @@ console.log(typeof null); // Output: "object"
 
 console.log(typeof undefined); // Output: "undefined"
 
-console.log(null == undefined); // Output: true
+
+
+console.log(null == 0);          // false
+// According to JavaScript's specification, null is only loosely equal to undefined & itself and no other value (not even 0).
+
+console.log(null == null);       // true
+
+console.log(null == undefined); //  true
 // null and undefined are considered loosely equal when using ==.
+
+
 
 console.log(null === undefined); // Output: false
 // === checks for strict equality (no type coercion). 
