@@ -13,18 +13,20 @@ var sub = function (a, b) {
 // 5
 // TypeError: sub is not a function
 
-// Explanation:
-// 1. add is a function declaration and is fully hoisted.
-// 2. sub is a function expression assigned to a variable. The variable sub is hoisted, but the function itself is not, so sub is undefined at the time of the call.
+/*
+1. add is a function declaration and is fully hoisted with its definition.
+2. sub is a function expression assigned to a variable. 
+   The variable sub is hoisted, but the function itself is not, so sub is undefined at the time of the call. */
 
 
+/*
+Hoisting with Arrow Functions:
+------------------------------
 
-// Hoisting with Arrow Functions:
-// ------------------------------
-// Arrow functions are treated like function expressions.
+Arrow functions are treated like function expressions.*/
+
 console.log(sum(2, 3));
 var sum = (a, b) => a + b;
-
-// OP: TypeError: sum is not a function
+// OP: TypeError: sum is not a function 
 
 
