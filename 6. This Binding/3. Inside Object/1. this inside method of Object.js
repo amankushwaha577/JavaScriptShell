@@ -8,3 +8,9 @@ const obj = {
   };
   obj.getName();
   
+
+// Output: 'Aman'
+//         {name: 'Aman', getName: ƒ}
+
+// Point 1 : Inside an object method, this refers to the object itself.
+// Point 2 : There is no effect of strict mode on object's this.
