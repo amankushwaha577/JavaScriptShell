@@ -10,5 +10,5 @@ const obj = {
 
 // Output: undefined
 
-// Explanation: When a method is assigned to a variable, 
-//              this is lost and defaults to the global object (or undefined in strict mode).
+// Explanation: When a method of object is assigned to a variable, 
+//              its this is lost and defaults to the global object (or undefined in strict mode).
