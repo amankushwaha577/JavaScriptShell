@@ -12,7 +12,9 @@ closureFunc1(); // "Outer variable"
 closureFunc2(); // "Outer variable"
 
 
-// Explanation:
-
-// Even though outer() is called twice, each returned closure retains access to its own outerVar in memory, 
-// which can be useful for managing state in a functional style.
+/*
+Explanation:
+------------
+1. Even though outer() is called twice, 
+   each returned closure (closureFunc1, closureFunc2 ) retains access to its own outerVar in memory, 
+2. which can be useful for managing state in a functional style. */
