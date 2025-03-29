@@ -64,11 +64,9 @@ console.log(z);
 
 
 const obj = { a: 10 };
-obj.a = 20; // Allowed
-obj = { b: 30 }; // not Allowed
+obj.a = 20;      // Allowed
+obj = { b: 30 }; // not Allowed | TypeError: Assignment to constant variable.
 
-// Answer:
-// ---------------
 // obj.a = 20: Allowed
 // const prevents reassignment of the variable itself, but the object it references is still mutable.
 
