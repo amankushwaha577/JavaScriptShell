@@ -2,7 +2,7 @@
 Promise.all() runs multiple promises in parallel, reducing wait time. 
 On the other hand if you try to do it using loop it will take time because it will resolve Promise one after another. */
 
-/* 1. Reolve using .then :
+/* 1. Resolve using .then :
 --------------------------*/
 
 const promise1 = new Promise((resolve) => setTimeout(() => resolve(1), 1000));
