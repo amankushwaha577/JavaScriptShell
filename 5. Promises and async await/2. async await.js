@@ -22,7 +22,9 @@ fetchData().then(console.log); // "Hello, World!"
 /*
 2. Using await with Promises :
 ------------------------------ 
-a. await waits for promise to resolve before moving to the next line..*/
+a. await waits for promise to resolve before moving to the next line.
+b. here The await expression pauses the execution of the getData() function for 2 seconds, 
+   making the code look synchronous even though it's asynchronous. */
 
 async function getData() {
     let promise = new Promise((resolve) => setTimeout(() => resolve("Data Loaded!"), 5000));
