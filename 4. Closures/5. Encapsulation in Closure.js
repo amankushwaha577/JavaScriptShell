@@ -21,7 +21,9 @@ myCounter.increment(); // 2
 myCounter.decrement(); // 1
 console.log(myCounter.getCount()); // 1
 
-// Explanation:
-// ---------------------
-// The closure encapsulates the count variable, allowing it to be modified only via the provided methods. 
-// This keeps the count private and protected from direct external access.
+/*
+Explanation:
+---------------------
+1. The closure encapsulates the count variable, allowing it to be modified only via the provided methods. 
+2. This keeps the count private and protected from direct external access.
+3. Means only the defined methods can manipulate count, prevents data Privacy.*/
