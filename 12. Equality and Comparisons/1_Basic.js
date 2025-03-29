@@ -2,21 +2,6 @@
 
 
 
-// 7. Empty Objects and Arrays
-console.log([] == 0);        // true
-console.log({} == 0);        // false
-console.log([] == ![]);      // true
-
-// Explanation:
-// [] == 0:
-// The empty array is coerced to an empty string (""), which is then coerced to 0.
-
-// {} == 0:
-// Objects are not coerced into numbers, so the result is false.
-
-// [] == ![]:
-// ![] evaluates to false( Since [] is truthy, applying ! flips it to false.)
-// [] == false becomes [] == 0, and the empty array is coerced to 0, so the result is true.
 
 
 
@@ -66,35 +51,4 @@ console.log(new String("test") === "test"); // false
 // ==: The string object is coerced to its primitive value ("test"), so the comparison is true.
 // ===: Strict equality fails because one is an object and the other is a string.
 
-
-
-
-// 14. Double Negatives
-console.log(![] == []);  // true
-console.log(![] == 0);   // true
-
-// Explanation:
-// ![] == []:
-// A. [] (an empty array) is truthy, so applying ! (logical NOT) makes it false,
-//    now=> false == []
-// B. When comparing a boolean (false) with an object (like []), JavaScript converts the boolean to a number: false is coerced to 0.
-//    now=> 0 == []
-// C. When comparing a number with an object (like []), JavaScript tries to convert the object to a primitive value.
-//    For an empty array ([]), the primitive value is an empty string ('').
-//    now=> 0 == ''
-// D. When comparing a number and a string, JavaScript converts the string to a number. An empty string ('') is coerced to 0.
-//    0 == 0 //true
-
-// ![] == 0:
-// ![] evaluates to false, which is coerced to 0, so the comparison is 0 == 0, which is true.
-
-
-
-
-
-// Key Takeaways:
-// == allows type coercion (can lead to unexpected results).
-// === is stricter (preferred in most cases).
-// Objects and arrays are compared by reference, not by value.
-// Be cautious with type coercion and edge cases like NaN, null, undefined, and empty objects/arrays.
 
