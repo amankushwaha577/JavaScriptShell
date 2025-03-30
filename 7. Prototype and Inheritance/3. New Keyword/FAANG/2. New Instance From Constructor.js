@@ -15,8 +15,13 @@ console.log(new Person().__proto__); // Same as Person.prototype
 
 
 console.log(Person.prototype === new Person().__proto__); // true
-// Prototype of custom Function === __proto__ of newly created instance 
+// Prototype of custom Function === __proto__ of newly created instance
 
+
+
+// Think Like This :
+console.log(new Person().__proto__ === Person.prototype ); // true
+                  // Compare ⬇️
 // But Note :
 console.log(Person.__proto__ === Function.prototype) // true
 // __proto__ of custom Function === prototype of Function constructor

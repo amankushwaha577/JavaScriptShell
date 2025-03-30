@@ -1,3 +1,10 @@
+
+// --------------------Amazing About Functions------------------------
+// 1. Only For functions in JavaScript, the prototype property is used when the function is intended to be used as a constructor. 
+//    It allows you to define properties and methods that will be inherited by objects created via the new keyword
+
+// 2. Every custom function in JavaScript has a prototype *property* by default, which is an empty object ({}).
+// 3. This prototype object is used to define properties or methods for instances if the function is used as a constructor.
 function CreateUser(username, score){
     this.username = username
     this.score = score
@@ -47,10 +54,10 @@ console.log(user2.score); // Output: 78
 //    this inside the constructor refers to the new object.
 //    The new object is returned automatically.
 
-// 2.When new is not used:
+// 2. If new is not used ( Interview ):
 // ----------------------------------
-//    this refers to the global object (or undefined in strict mode).
-//    No object is returned, so user3 becomes undefined.
+//    this will refers to the global object (or undefined in strict mode).
+//    + No object is returned, so user3 becomes undefined.
 
 const user3 = CreateUser("Hardik", 77);
 
