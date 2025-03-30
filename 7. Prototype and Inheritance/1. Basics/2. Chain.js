@@ -71,8 +71,4 @@ console.log(user.prototype); // undefined
       console.log(arr1.prototype);
 //    Output: undefined
 
-      console.log(Object.getPrototypeOf(arr1) === Array.prototype); // true
-      console.log(arr1.__proto__ === Array.prototype); // true
-
-// -------------------------------------------------------------------
 
