@@ -1,4 +1,4 @@
-// 2. Constructor Functions and prototype Property
+// 2. Constructor Functions and its prototype Property :
 // A constructor function creates objects using the new keyword. 
 // Constructor functions have a prototype property that is shared among all objects created by them.
 
