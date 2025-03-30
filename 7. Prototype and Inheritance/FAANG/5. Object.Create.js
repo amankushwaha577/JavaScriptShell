@@ -2,10 +2,12 @@
 const animal = { eats: true };
 const rabbit = Object.create(animal);
 
-console.log(rabbit.eats); // true
+console.log(rabbit.eats);                 // true (inherited, not copied)
+console.log(rabbit.__proto__ === animal); // true (rabbit's prototype is animal)
 
 // 1. Object.create(obj) creates a new object with proto as its prototype.
 // 2. rabbit inherits from animal but doesn’t copy its properties.
+
 
 
 
@@ -20,6 +22,7 @@ a. rabbit is created using Object.create(animal), it inherits from animal,
    meaning it doesn’t have a separate copy of animal's properties. Instead, it accesses them via prototype chaining.
 b. The hasOwnProperty method checks if a property is directly on the object, not inherited.
 */
+
 console.log(rabbit.eats); // true (inherited)
 
 animal.eats = false; // Modifying the prototype object
