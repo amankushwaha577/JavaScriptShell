@@ -6,3 +6,21 @@ console.log(typeof Test.prototype); // "object"
 
 console.log(Test.prototype.constructor === Test); // true
 // The prototype is automatically an object with a constructor property pointing back to the function.
+
+
+
+
+
+
+// -------------------------------------------------------
+// So It's newly created child will also point to function.
+// -------------------------------------------------------
+
+const test = new Test();
+
+console.log(test.constructor === Test); // true
+
+// 1. The constructor property points to the function that is used to create an object.
+
+
+
