@@ -23,7 +23,7 @@ CreateUser.prototype.Score = function(){
 }
 
 console.log(CreateUser.prototype);
-// Object With Appended Properties.
+// prototype of CreateUser constructor with Appended Properties.
 // Op: { increment: [Function (anonymous)], Score: [Function (anonymous)] }
 
 
@@ -42,22 +42,27 @@ user2.increment();
 console.log(user2.score); // Output: 78
 
 
+// ------------------------Remember It ---------------------------------------------------
+console.log(user2.__proto__ === CreateUser.prototype); // true
+// a. __proto__ of new instance's is set to the prototype of the CreateUser() constructor that created it.
+// b. that's why instance can access Constructor property that is inside prototype.
+// --------------------------------------------------------------------------------------
 
 
 
 
+/*
+Why the new Keyword is Necessary
+1. When new is used:
+----------------------------------
+   A new object is created.
+   this inside the constructor refers to the new object.
+   The new object is returned automatically.
 
-// Why the new Keyword is Necessary
-// 1. When new is used:
-// ----------------------------------
-//    A new object is created.
-//    this inside the constructor refers to the new object.
-//    The new object is returned automatically.
-
-// 2. If new is not used ( Interview ):
-// ----------------------------------
-//    this will refers to the global object (or undefined in strict mode).
-//    + No object is returned, so user3 becomes undefined.
+2. If new is not used ( Interview ):
+----------------------------------
+   this inside Constructor will refers to the global object (or undefined in strict mode).
+   + No object is returned, so user3 becomes undefined. */
 
 const user3 = CreateUser("Hardik", 77);
 
@@ -65,15 +70,3 @@ console.log(user3)
 // undefined
 console.log(user3.score); 
 // Output: TypeError: Cannot read properties of undefined (reading 'score')
-
-
-
-
-
-
-// Points to Remember;;
-// 1. When new keyword initiates a new Objects creates.
-// 2. Newly created object gets liked to prototype property of constructor function.
-//    It means it will have now acccess to all properties of Constructor function.
-// 3. if constructor function does't return a non-primitive value(oject, array, function etc.)
-//    the newly created object is returned.
