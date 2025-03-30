@@ -5,5 +5,4 @@ console.log(typeof Test.prototype); // "object"
 // Its just like "typeof {}"
 
 console.log(Test.prototype.constructor === Test); // true
-// The prototype is automatically an object with a constructor 
-// property pointing back to the function.
+// The prototype is automatically an object with a constructor property pointing back to the function.
