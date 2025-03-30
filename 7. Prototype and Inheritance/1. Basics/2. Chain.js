@@ -48,7 +48,7 @@ function multiplyBy5(num){
 // Functions are also objects.
 multiplyBy5.power = 2;
 
-console.log(multiplyBy5(5)); // 25
+console.log(multiplyBy5(5));    // 25
 console.log(multiplyBy5.power); // 2
 
 console.log(multiplyBy5.prototype); // op: {} // It's "this" of multiplyBy5.prototype 
@@ -59,7 +59,7 @@ console.log(user.prototype); // undefined
 // 1. For functions in JavaScript, the prototype property is used when the function is intended to be used as a constructor. 
 //    It allows you to define properties and methods that will be inherited by objects created via the new keyword
 
-// 2. Every custom function in JavaScript has a prototype property by default, which is an empty object ({}).
+// 2. Every custom function in JavaScript has a prototype *property* by default, which is an empty object ({}).
 // 3. This prototype object is used to define properties or methods for instances if the function is used as a constructor.
 
       multiplyBy5.prototype.description = "Multiplies a number by 5";

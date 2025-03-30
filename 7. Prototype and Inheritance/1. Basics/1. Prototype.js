@@ -1,11 +1,12 @@
-// Q. 1. What is a Prototype?
-// Ans. Whenever we create any var/object in JS, than JS engine attaches an object to our custom created object.
-//      this object contains set of properties that is called [[Prototype]] object.
-//      A prototype acts as a blueprint for objects.
+/*
+Q. 1. What is a Prototype?
+Ans. Whenever we create any var/object in JS, than JS engine attaches an object to our custom created object.
+     this object contains set of properties that is called [[Prototype]] object.
+     A prototype acts as a blueprint for objects.
 
-// Q. 2. What is a _proto_?
-// Ans.  To access that hidden object we uses property _proto_
-//       _proto_ provides reference to the prototype object. 
+Q. 2. What is a _proto_?
+Ans.  To access that hidden object we uses property _proto_
+      _proto_ provides reference to the prototype object.  */
 
 
 
@@ -34,7 +35,7 @@ let arr1= ["Aman", "kushwaha"]
 // ----------------------------------------------------------------
 //    => You will get all those ( Of Only Array ) properties in array form [.length, .map(), .filter(), .reduce(), ......]
 
-// 3. If you do Array.prototype =>
+// 3. If you do Array.prototype => Same Result. 
 // ----------------------------------------------------------------
 //    => You will get all those ( Of Only Array ) properties in array form [.length, .map(), .filter(), .reduce(), ......]
 
