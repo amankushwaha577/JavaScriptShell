@@ -1,27 +1,6 @@
 /* 
 ========================= JavaScript String Built-in Methods =========================
 
-1️⃣ String Manipulation Methods:
----------------------------------
-1. toUpperCase()  → Converts string to uppercase.                     "hello".toUpperCase();              // "HELLO"
-   toLowerCase()  → Converts string to lowercase.                     "HELLO".toLowerCase();              // "hello
-
-2. trim()       → Removes whitespace from both ends.               "  hello  ".trim();                     // "hello"
-   trimStart()  → Removes whitespace from the start.               "  hello  ".trimStart();                // "hello  "
-   trimEnd()  →   Removes whitespace from the end.                 "  hello  ".trimEnd();                  // "  hello"
-
-3. replace(search, replaceWith)     → Replaces first match.        "aman aman".replace("am", "x");          // 'xan aman'
-   replaceAll(search, replaceWith)  → Replaces all occurrences.    "aman aman".replaceAll("hello", "hi");   // "hi hi"
-
-
-    Q❓. What’s the difference between replace() and replaceAll()?
-    Ans. 1. replace(search, newValue): Replaces only the first occurrence.
-         2. replaceAll(search, newValue): Replaces all occurrences. */
-
-        "hello hello".replace("hello", "hi"); // "hi hello"
-        "hello hello".replaceAll("hello", "hi"); // "hi hi"
-
-
 /*
 2️⃣ String Search Methods:
 ---------------------------                                                         01234

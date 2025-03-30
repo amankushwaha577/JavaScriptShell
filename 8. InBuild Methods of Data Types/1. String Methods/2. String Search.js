@@ -1,0 +1,88 @@
+/* 
+========================= JavaScript String Built-in Methods =========================
+
+/*
+2️⃣ String Search Methods:
+---------------------------                                                         01234
+1.  indexOf(search)      → Returns the index of the first occurrence.              "hello".indexOf("l");       // 2
+    lastIndexOf(search)  → Returns the index of the last occurrence.               "hello".lastIndexOf("l");   // 3
+
+2.  includes(substring)  → Checks if the string contains a substring.              "hello".includes("he");     // true
+
+3.  startsWith(prefix)  → Checks if the string starts with a given substring.      "hello".startsWith("he");   // true
+    endsWith(suffix)    → Checks if the string ends with a given substring.        "hello".endsWith("lo");     // true */
+
+/*
+Q1❓. How does indexOf() differ from includes()?
+Ans.  1. indexOf(substring):  Returns the first occurrence index or -1 if not found.
+      2. includes(substring): Returns true or false depending on whether the substring exists.  */
+
+         "hello".indexOf("l");  // 2
+         "hello".includes("l"); // true
+
+         indexOf(search, startingPosition)  // indexOf() can take startingPosition from where it will start seaching.
+
+
+/*
+==================================Real World================================
+
+❓ Q1: How can you check if a substring exists in a string using indexOf()?
+*/
+let str = "hello";
+console.log(str.indexOf("l") !== -1); // true (found at index 2)
+
+
+/*
+❓ Q2: How can you find all occurrences of a character in a string?
+*/
+let word = "hello";
+let positions = [];
+let pos = word.indexOf("l");
+
+while (pos !== -1) {
+    positions.push(pos);
+    pos = word.indexOf("l", pos + 1);
+    // indexOf() can take startingPosition from where it will start seaching
+}
+
+console.log(positions); // [2, 3]
+
+
+/*
+❓ Q3: How can you check if a word exists in a sentence?
+*/
+let sentence = "The quick brown fox jumps over the lazy dog";
+console.log(sentence.includes("fox"));  // true
+console.log(sentence.includes("cat"));  // false
+
+
+/*
+❓ Q4: How can you validate if a URL starts with "https://"?
+*/
+let url = "https://example.com";
+console.log(url.startsWith("https://"));  // true
+
+
+/*
+❓ Q5: How can you check if a filename has a specific extension?
+*/
+let filename = "report.pdf";
+console.log(filename.endsWith(".pdf")); // true
+console.log(filename.endsWith(".doc")); // false
+
+
+/*
+❓ Q6: It extracts the last part after the dot (.), making it flexible for filenames with multiple dots (file.name.pdf).
+*/
+function hasValidExtensionSplit(filename) {
+    let ext = filename.split(".").pop(); // Get the last part after '.'
+    return ["pdf", "xlsx", "ppt"].includes(ext.toLowerCase());
+}
+
+// "filename".split(".")   => ["file", "pdf"]   |  Split String from .
+//  ["file", "pdf"].pop()  =>  "pdf"            |  extact extension using pop()       
+
+console.log(hasValidExtensionSplit("file.pdf"));   // true
+console.log(hasValidExtensionSplit("data.XLSX"));  // true
+console.log(hasValidExtensionSplit("slides.ppt")); // true
+console.log(hasValidExtensionSplit("image.png"));  // false
