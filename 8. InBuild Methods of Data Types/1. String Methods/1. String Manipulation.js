@@ -1,6 +1,8 @@
 /* 
 ========================= JavaScript String Built-in Methods =========================
 
+String is Immutable can't change.
+
 1️⃣ String Manipulation Methods:
 ---------------------------------
 1. toUpperCase()  → Converts string to uppercase.                     "hello".toUpperCase();              // "HELLO"
