@@ -32,5 +32,17 @@
 1. split(delimiter), join(delimiter)
 
 
+5️⃣ Other Few :
+--------------
+1. repeat(n) :
+2. charAt(index) vs at(index) : Both return a single character as a string.
+   a. charAt() does't and retuns "" | at() supports -ve index. 
+   b. For out of range index => charAt() returns ""  | at () returns undefined
+   c. Both methods are efficient, but `charAt()` is more widely supported in older browsers.
+
+3. concat() :  
+   a. `concat()` merges two or more strings and returns a **new string**.
+   b.  It does **not** modify the original strings.
+
 */
 
