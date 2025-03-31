@@ -18,7 +18,9 @@ Answer. JavaScript provides various array methods that can be categorized as fol
 
 3. Iteration Methods :
 ---------------------
-    a. forEach(), map(), filter(), some(), every(), reduce(), reduceRight()
+    a. forEach(), map(), filter(), 
+    b. some(), every(), 
+    c. reduce(), reduceRight()
 
 
 4. Search Methods :
