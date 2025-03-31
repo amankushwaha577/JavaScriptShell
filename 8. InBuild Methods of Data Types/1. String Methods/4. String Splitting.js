@@ -5,7 +5,7 @@
 4️⃣ String Splitting & Joining:
 --------------------------------
 1. split(delimiter)  → Splits a string into an array.                        "hello world".split(" ");   // ["hello", "world"]
-2. join(delimiter)  → Joins array elements into a string.               ["hello", "world"].join(" ");   // "hello world"        */
+2. join(delimiter)  →  Joins array elements into a string.               ["hello", "world"].join(" ");   // "hello world"        */
 
 
 /*
