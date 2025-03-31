@@ -29,8 +29,7 @@ Iteration & Reduction Methods (Do Not Modify Original Array):
 -----------------------------------------------
 
         a. Returns a **new array** with transformed elements.
-        b. Does **not** modify the original array.
-        c. Commonly used for data transformation. */
+        b. Commonly used for data transformation. */
 
         let nums = [2, 3, 4];
         let doubled = nums.map(num => num * 2);
@@ -44,8 +43,7 @@ Iteration & Reduction Methods (Do Not Modify Original Array):
 -----------------------------------------------
 
         a. Returns a **new array** containing elements that satisfy the condition.
-        b. Does **not** modify the original array.
-        c. Used to remove unwanted elements. */
+        b. Used to remove unwanted elements. */
 
         let words = ["apple", "banana", "kiwi", "grape"];
         let shortWords = words.filter(word => word.length <= 5);

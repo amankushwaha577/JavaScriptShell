@@ -10,8 +10,7 @@
 ---------------------------------------------------
 
         a. Returns **the first** element that satisfies the condition.
-        b. Returns `undefined` if no element matches.
-        c. Does **not** modify the original array. */
+        b. Returns `undefined` if no element matches. */
 
         let numbers = [10, 20, 30, 40, 50];
         let firstMatch = numbers.find(num => num > 25);
@@ -25,8 +24,7 @@
 ------------------------------------------------------
 
         a. Returns **the index** of the first element that satisfies the condition.
-        b. Returns `-1` if no element matches.
-        c. Does **not** modify the original array. */
+        b. Returns `-1` if no element matches.*/
 
         let firstMatchIndex = numbers.findIndex(num => num > 25);
 
@@ -76,29 +74,4 @@
         console.log(fruits.includes("cherry"));  // true
         console.log(fruits.includes("grape"));   // false
         console.log(fruits.includes("banana", 2));  // true (search starts from index 2)
-
-
-/*
-Comparison Table:
------------------
-| Method        | Purpose                              | Returns  | Modifies Original? |
-|--------------|--------------------------------------|---------|--------------------|
-| find()       | Finds **first matching** element    | Element | ❌ No |
-| findIndex()  | Finds **first matching** index      | Index   | ❌ No |
-| indexOf()    | Finds **first occurrence** index    | Index   | ❌ No |
-| lastIndexOf()| Finds **last occurrence** index     | Index   | ❌ No |
-| includes()   | Checks if value exists              | Boolean | ❌ No |
-*/
-
-
-/*
-✅ Key Takeaways:
------------------
-1. **All these methods do NOT modify the original array**.
-2. `find()` returns **the element** itself, while `findIndex()` returns **the index**.
-3. `indexOf()` & `lastIndexOf()` search for **exact matches**.
-4. `includes()` is best for **checking existence** of a value (`true/false`).
-5. If you need **a single match**, use `find()`.  
-6. If you need **all matches**, use `filter()` instead of `find()`.
-*/
 

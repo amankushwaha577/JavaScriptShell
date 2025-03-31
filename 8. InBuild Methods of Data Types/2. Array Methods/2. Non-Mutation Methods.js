@@ -10,8 +10,7 @@ Non-Mutation Methods (Return a New Array) :
 -------------------------------
 
         a. Returns a new array where each element is transformed based on the callback function.
-        b. Does **not** modify the original array.
-        c. The callback function takes `(element, index, array)` as parameters. */
+        b. The callback function takes `(element, index, array)` as parameters. */
 
         let numbers = [1, 2, 3];
         let squared = numbers.map(num => num * num);
@@ -24,8 +23,7 @@ Non-Mutation Methods (Return a New Array) :
 2. filter() – Select Elements That Pass a Condition :                array.filter(callbackFunction);
 -----------------------------------------------
 
-        a. Returns a **new array** containing elements that satisfy the condition.
-        b. Does **not** modify the original array. */
+        a. Returns a **new array** containing elements that satisfy the condition. */
 
         let nums = [10, 25, 30, 45, 50];
         let filtered = nums.filter(num => num > 30);
@@ -53,8 +51,7 @@ Non-Mutation Methods (Return a New Array) :
 4. concat() – Merge Two or More Arrays :                             array.concat(array2, array3, ...);
 -----------------------------------------------
 
-        a. Combines multiple arrays into a **new array**.
-        b. Does **not** modify the original arrays. */
+        a. Combines multiple arrays into a **new array**. */
 
         let arr2a = [1, 2];
         let arr2b = [3, 4];
@@ -97,16 +94,3 @@ Non-Mutation Methods (Return a New Array) :
 
         console.log(words);  // ["Hello", "world", "JavaScript", "is", "fun"]
 
-
-/*
-Comparison Table of Non-Mutating Methods:
------------------------------------------
-| Method     | Purpose                         | Modifies Original? | Returns |
-|------------|---------------------------------|--------------------|---------|
-| map()      | Transforms elements            | ❌ No              | New array |
-| filter()   | Selects elements               | ❌ No              | New array |
-| slice()    | Extracts part of array         | ❌ No              | New array |
-| concat()   | Merges arrays                  | ❌ No              | New array |
-| flat()     | Flattens nested arrays         | ❌ No              | New array |
-| flatMap()  | Maps & flattens                | ❌ No              | New array |
-*/
