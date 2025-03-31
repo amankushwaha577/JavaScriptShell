@@ -36,7 +36,7 @@
 --------------
 1. repeat(n) :
 2. charAt(index) vs at(index) : Both return a single character as a string.
-   a. charAt() does't and retuns "" | at() supports -ve index. 
+   a. charAt() does't work with -v index and retuns "" | at() supports -ve index. 
    b. For out of range index => charAt() returns ""  | at () returns undefined
    c. Both methods are efficient, but `charAt()` is more widely supported in older browsers.
 
