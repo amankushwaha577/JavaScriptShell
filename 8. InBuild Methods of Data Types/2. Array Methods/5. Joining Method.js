@@ -56,25 +56,3 @@
         let dates = [new Date(2025, 3, 15), new Date(2025, 4, 20)];
         console.log(dates.toLocaleString("en-US")); // "4/15/2025, 12:00:00 AM, 5/20/2025, 12:00:00 AM"
 
-
-/*
-Comparison Table:
------------------
-| Method            | Purpose                                 | Returns   | Modifies Original? |
-|------------------|-----------------------------------------|---------|--------------------|
-| join()          | Joins elements with a custom separator | String  | ❌ No |
-| toString()      | Converts array to a comma-separated string | String  | ❌ No |
-| toLocaleString() | Converts elements with locale formatting | String  | ❌ No |
-*/
-
-
-/*
-✅ Key Takeaways:
------------------
-1. **All these methods return a string and do NOT modify the original array**.
-2. `join()` is flexible and allows **custom separators**.
-3. `toString()` always joins with **a comma `,`**.
-4. `toLocaleString()` is useful for **currency, date, and locale-specific formatting**.
-5. If you need precise formatting, prefer **`toLocaleString()`** over `toString()`.
-*/
-

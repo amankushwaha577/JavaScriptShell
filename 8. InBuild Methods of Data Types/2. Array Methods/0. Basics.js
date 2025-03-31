@@ -25,7 +25,9 @@ Answer. JavaScript provides various array methods that can be categorized as fol
 
 4. Search Methods :
 -------------------
-    a. find(), findIndex(), indexOf(), lastIndexOf(), includes()
+    a. find(), findIndex(), 
+    b. indexOf(), lastIndexOf(), 
+    c. includes()
 
     
 5. Joining & Conversion Methods :
