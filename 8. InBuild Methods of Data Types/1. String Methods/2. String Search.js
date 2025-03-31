@@ -6,6 +6,8 @@
 ---------------------------                                                         01234
 1.  indexOf(search)      → Returns the index of the first occurrence.              "hello".indexOf("l");       // 2
     lastIndexOf(search)  → Returns the index of the last occurrence.               "hello".lastIndexOf("l");   // 3
+    
+    Note : indexOf() and lastIndexOf() both accept an optional starting position parameter.
 
 2.  includes(substring)  → Checks if the string contains a substring.              "hello".includes("he");     // true
 
@@ -21,6 +23,27 @@ Ans.  1. indexOf(substring):  Returns the first occurrence index or -1 if not fo
          "hello".includes("l"); // true
 
          indexOf(search, startingPosition)  // indexOf() can take startingPosition from where it will start seaching.
+/*
+Q2❓. indexOf() Example with Start Position vs lastIndexOf() Example with Start Position ?
+Ans.  Index:  0  1  2  3  4  5  6  7  8  9 10
+      String: h  e  l  l  o     w  o  r  l  d
+
+        lastIndexOf("o", 6) :
+        --------------------
+        a. "o" → We are looking for the letter "o".
+        b. Start searching from index 6 (which is "w" in "world").
+        c. Searches backward (from index 6 to index 0).
+        d. Finds first "o" at index 4 when moving backwards.  */
+        
+        let text = "hello world";
+
+        console.log(text.indexOf("o"));       // 4 (first "o" found at index 4)
+        console.log(text.indexOf("o", 5));    // 7 (search starts from index 5, finds next "o" at 7)
+        console.log(text.indexOf("z"));       // -1 (not found)
+
+        console.log(text.lastIndexOf("o"));      // 7 (last "o" found at index 7)
+        console.log(text.lastIndexOf("o", 6));   // 4 (searching backwards from index 6)
+        console.log(text.lastIndexOf("z"));      // -1 (not found)
 
 
 /*
