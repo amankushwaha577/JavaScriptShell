@@ -124,17 +124,3 @@ Comparison Table:
 | reduce()     | Reduces array to a value       | ❌ No              | Single value |
 | reduceRight()| Reduces from right to left     | ❌ No              | Single value |
 */
-
-
-/*
-✅ Key Takeaways:
------------------
-1. **None of these methods modify the original array**.
-2. `forEach()` is used for **executing code** but does **not return a new array**.
-3. `map()` **transforms elements** and returns a new array.
-4. `filter()` **selects elements** based on a condition.
-5. `some()` & `every()` return `true` or `false` based on conditions.
-6. `reduce()` & `reduceRight()` are used for computing a **single value**.
-7. If you need **mutation**, use methods like `push()`, `splice()`, etc.
-*/
-

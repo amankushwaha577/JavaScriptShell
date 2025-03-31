@@ -1,7 +1,8 @@
 /*
 Non-Mutation Methods (Return a New Array) :
 ---------------------------------------------
-    a. map(), filter(), slice(), concat(), flat(), flatMap()
+    a. map(), filter(), slice(), 
+    b. concat(), flat(), flatMap()
 */
 
 /*
@@ -109,14 +110,3 @@ Comparison Table of Non-Mutating Methods:
 | flat()     | Flattens nested arrays         | ❌ No              | New array |
 | flatMap()  | Maps & flattens                | ❌ No              | New array |
 */
-
-
-/*
-✅ Key Takeaways:
------------------
-1. **These methods NEVER modify the original array** – they always return a new array.
-2. `map()` transforms, `filter()` selects, `slice()` extracts, `concat()` merges.
-3. `flat()` flattens nested arrays, and `flatMap()` combines mapping and flattening.
-4. If you need to **mutate** an array instead, use methods like `push()`, `pop()`, `splice()`, etc.
-*/
-

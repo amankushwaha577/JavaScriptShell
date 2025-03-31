@@ -10,7 +10,8 @@ Answer. JavaScript provides various array methods that can be categorized as fol
 
 2. Non-Mutation Methods (Return a New Array) :
 ---------------------------------------------
-    a. map(), filter(), slice(), concat(), flat(), flatMap()
+    a. map(), filter(), slice(), 
+    b. concat(), flat(), flatMap()
 
 
 3. Iteration Methods :
