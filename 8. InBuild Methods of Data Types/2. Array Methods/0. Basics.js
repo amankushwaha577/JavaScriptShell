@@ -5,7 +5,8 @@ Answer. JavaScript provides various array methods that can be categorized as fol
 1. Mutation Methods (Modify Original Array):
 --------------------------------------------
    a. push(), pop(), shift(), unshift(), 
-   b. splice(), reverse(), sort(), fill(), 
+   b. splice(), 
+   c. reverse(), sort(), fill(), 
 
 
 2. Non-Mutation Methods (Return a New Array) :
