@@ -109,18 +109,3 @@ Iteration & Reduction Methods (Do Not Modify Original Array):
         let sentence = words2.reduceRight((acc, word) => acc + " " + word);
 
         console.log(sentence);  // "World Hello"
-
-
-/*
-Comparison Table:
------------------
-| Method        | Purpose                         | Modifies Original? | Returns |
-|--------------|---------------------------------|--------------------|---------|
-| forEach()    | Iterates, executes function     | ❌ No              | undefined |
-| map()        | Transforms elements            | ❌ No              | New array |
-| filter()     | Selects elements               | ❌ No              | New array |
-| some()       | Checks if **any** match        | ❌ No              | Boolean |
-| every()      | Checks if **all** match        | ❌ No              | Boolean |
-| reduce()     | Reduces array to a value       | ❌ No              | Single value |
-| reduceRight()| Reduces from right to left     | ❌ No              | Single value |
-*/
