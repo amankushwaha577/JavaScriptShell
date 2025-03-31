@@ -6,18 +6,26 @@
 -------------------------------    
 1. slice(start, end)      → Extracts a section of the string.                    "hello".slice(1, 4);        // "ell"
 2. substring(start, end)  → Similar to `slice()`, but no negative indices.       "hello".substring(1, 4);    // "ell"
-3. substr(start, length)  → Extracts part of a string based on length.           "hello".substr(1, 3);       // "ell"  deprecated */
+3. substr(start, length)  → Extracts part of a string based on length.           "hello".substr(1, 3);       // "ell"  deprecated 
+
+Slice() vs substring() :
+a. If we skip 2nd parameter, In Both methods => endIndex = length
+a. slice supports -v indexes. | substring converts -v index to 0.
+b. if start > end index => slice retuns "" | substring swaps the indexes.  */
 
 
 /*
-Q1❓ What if you call slice() with only one parameter?
+Q1❓ What if you call slice() | substring() with only one parameter?
 Ans. It extracts from the given start index to the end of the string. */
         "hello".slice(2); // "llo"
+        "hello".substring(2); // "llo"
 
 /*
 Q2❓ What happens if slice() has an end index smaller than the start index?
-Ans. It returns an empty string. */
-        "hello".slice(4, 2); // ""
+Ans. It returns an empty string. 
+     if start > end index => slice retuns "" | substring swaps the indexes. */
+        "hello".slice(4, 2);      // ""
+        "hello".substring(4, 2); // "ll"
 
 /*
 Q3❓  What is the difference between slice(), substring(), and substr()?
@@ -48,21 +56,10 @@ Ans.  All are used to Extracts part of a string.
 
 /*
 =========================================Real World=======================================
-❓ Q1: What is the key difference between slice() and substring()?
-*/
-let str = "hello";
-
-// slice() supports negative indices
-console.log(str.slice(-4, -1));   // "ell"
-
-// substring() treats negative indices as 0
-console.log(str.substring(-4, -1)); // "" (treated as substring(0,0))
-
 /*
 ❓ Q2: How does substr() differ from slice() and substring()?
 Answer. It's Deprecated.
 */
-
 
 /*
 ❓ Q3: How can you extract the last 3 characters of a string dynamically?

@@ -1,18 +1,17 @@
 /* 
 ========================= JavaScript String Built-in Methods =========================
 
-/*
 2️⃣ String Search Methods:
 ---------------------------                                                         01234
 1.  indexOf(search)      → Returns the index of the first occurrence.              "hello".indexOf("l");       // 2
     lastIndexOf(search)  → Returns the index of the last occurrence.               "hello".lastIndexOf("l");   // 3
-    
-    Note : indexOf() and lastIndexOf() both accept an optional starting position parameter.
 
 2.  includes(substring)  → Checks if the string contains a substring.              "hello".includes("he");     // true
 
 3.  startsWith(prefix)  → Checks if the string starts with a given substring.      "hello".startsWith("he");   // true
-    endsWith(suffix)    → Checks if the string ends with a given substring.        "hello".endsWith("lo");     // true */
+    endsWith(suffix)    → Checks if the string ends with a given substring.        "hello".endsWith("lo");     // true 
+    
+    Note : All accept an optional starting position parameter.*/
 
 /*
 Q1❓. How does indexOf() differ from includes()?
@@ -22,7 +21,7 @@ Ans.  1. indexOf(substring):  Returns the first occurrence index or -1 if not fo
          "hello".indexOf("l");  // 2
          "hello".includes("l"); // true
 
-         indexOf(search, startingPosition)  // indexOf() can take startingPosition from where it will start seaching.
+         indexOf(search) 
 /*
 Q2❓. indexOf() Example with Start Position vs lastIndexOf() Example with Start Position ?
 Ans.  Index:  0  1  2  3  4  5  6  7  8  9 10
@@ -44,6 +43,24 @@ Ans.  Index:  0  1  2  3  4  5  6  7  8  9 10
         console.log(text.lastIndexOf("o"));      // 7 (last "o" found at index 7)
         console.log(text.lastIndexOf("o", 6));   // 4 (searching backwards from index 6)
         console.log(text.lastIndexOf("z"));      // -1 (not found)
+
+
+/*
+Q3❓. includes() Example with Start Position ?
+Ans. */ 
+        console.log("hello world".includes("o", 5));  // true (Search starts from index 5)
+        console.log("hello world".includes("h", 1));  // false (Search starts from index 1, missing 'h')
+
+/*
+Q4❓. includes() Example with Start Position ?
+Ans. */ 
+        console.log("hello world".startsWith("hello"));   // true
+        console.log("hello world".startsWith("world"));   // false
+        console.log("hello world".startsWith("world", 6)); // true (starts checking from index 6)
+
+        console.log("hello world".endsWith("world"));  // true
+        console.log("hello world".endsWith("hello"));  // false
+        console.log("hello world".endsWith("o", 5));   // true (Considers only first 5 chars: "hello")
 
 
 /*
