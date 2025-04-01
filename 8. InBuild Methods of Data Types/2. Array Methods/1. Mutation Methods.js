@@ -146,3 +146,61 @@
 
 
 
+/*
+==================================Real World================================
+
+❓ Q1: How can you dynamically add items to a shopping cart using push()?
+*/
+let cart = ["apple", "banana"];
+cart.push("orange", "grapes");
+console.log(cart); // ["apple", "banana", "orange", "grapes"]
+
+/*
+❓ Q2: How can you remove the last item from a browser's navigation history using pop()?
+*/
+let history = ["home", "about", "contact"];
+let lastPage = history.pop();
+console.log(history); // ["home", "about"]
+console.log(lastPage); // "contact"
+
+/*
+❓ Q3: How can you prepend elements to a task list using unshift()?
+*/
+let tasks = ["Write code", "Review PRs"];
+tasks.unshift("Check emails", "Daily standup");
+console.log(tasks); // ["Check emails", "Daily standup", "Write code", "Review PRs"]
+
+/*
+❓ Q4: How can you implement a queue system where the first element is processed first using shift()?
+*/
+let queue = ["User1", "User2", "User3"];
+let servedUser = queue.shift();
+console.log(queue); // ["User2", "User3"]
+console.log(servedUser); // "User1"
+
+/*
+❓ Q5: How can you remove or replace elements from a playlist using splice()?
+*/
+let playlist = ["Song1", "Song2", "Song3", "Song4"];
+playlist.splice(1, 2, "NewSong1", "NewSong2");
+console.log(playlist); // ["Song1", "NewSong1", "NewSong2", "Song4"]
+
+/*
+❓ Q6: How can you reverse an array to display latest notifications first using reverse()?
+*/
+let notifications = ["Message1", "Message2", "Message3"];
+notifications.reverse();
+console.log(notifications); // ["Message3", "Message2", "Message1"]
+
+/*
+❓ Q7: How can you sort product prices correctly using sort()?
+*/
+let prices = [400, 20, 100, 5];
+prices.sort((a, b) => a - b);
+console.log(prices); // [5, 20, 100, 400]
+
+/*
+❓ Q8: How can you pre-fill an array with default values using fill()?
+*/
+let defaultSettings = new Array(5).fill("enabled");
+console.log(defaultSettings); // ["enabled", "enabled", "enabled", "enabled", "enabled"]
