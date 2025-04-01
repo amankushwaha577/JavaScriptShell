@@ -107,3 +107,70 @@ Iteration & Reduction Methods (Do Not Modify Original Array):
         let sentence = words2.reduceRight((acc, word) => acc + " " + word);
 
         console.log(sentence);  // "World Hello"
+
+
+        
+/*
+================= Real-World Q&A for Iteration & Reduction Methods =================
+
+1️⃣ forEach() – When would you use forEach instead of a loop?
+----------------------------------------------------------------------------
+*/
+let students = ["Alice", "Bob", "Charlie"];
+students.forEach(student => console.log(`Hello, ${student}!`));
+
+// Output:
+// Hello, Alice!
+// Hello, Bob!
+// Hello, Charlie!
+// ✅ Used for executing side effects like logging.
+
+/*
+2️⃣ map() – How can you convert an array of prices from dollars to cents?
+-------------------------------------------------------------------------
+*/
+let prices = [10.5, 20.99, 5.75];
+let cents = prices.map(price => Math.round(price * 100));
+console.log(cents); // [1050, 2099, 575]
+
+/*
+3️⃣ filter() – How can you get all even numbers from an array?
+---------------------------------------------------------------
+*/
+let numbers3 = [1, 2, 3, 4, 5, 6];
+let evens = numbers3.filter(num => num % 2 === 0);
+console.log(evens); // [2, 4, 6]
+
+/*
+4️⃣ some() – How can you check if an array contains negative numbers?
+--------------------------------------------------------------------
+*/
+let values = [3, -1, 5, 7];
+console.log(values.some(num => num < 0)); // true
+
+/*
+5️⃣ every() – How can you verify if all elements in an array are greater than zero?
+------------------------------------------------------------------------------------
+*/
+let scores = [85, 90, 78, 88];
+console.log(scores.every(score => score > 0)); // true
+
+/*
+6️⃣ reduce() – How can you calculate the total price of products in a cart?
+----------------------------------------------------------------------------
+*/
+let cart = [
+    { name: "Shirt", price: 20 },
+    { name: "Shoes", price: 50 },
+    { name: "Hat", price: 15 }
+];
+let totalPrice = cart.reduce((total, item) => total + item.price, 0);
+console.log(totalPrice); // 85
+
+/*
+7️⃣ reduceRight() – How can you concatenate an array of words into a sentence, but in reverse?
+--------------------------------------------------------------------------------------------
+*/
+let words7 = ["world", "beautiful", "a", "is", "This"];
+let sentence7 = words7.reduceRight((acc, word) => acc + " " + word);
+console.log(sentence7); // "This is a beautiful world"
