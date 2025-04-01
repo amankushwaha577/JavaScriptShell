@@ -94,3 +94,61 @@ Non-Mutation Methods (Return a New Array) :
 
         console.log(words);  // ["Hello", "world", "JavaScript", "is", "fun"]
 
+
+        
+/* 
+==================================Real World================================
+
+❓ Q1: How can you create a new array with each number doubled?
+*/
+let nums9 = [1, 2, 3, 4];
+let doubled = nums9.map(num => num * 2);
+console.log(doubled); // [2, 4, 6, 8]
+
+
+/*
+❓ Q2: How can you filter out users who are inactive from a list of users?
+*/
+let users = [
+    { name: "Alice", active: true },
+    { name: "Bob", active: false },
+    { name: "Charlie", active: true }
+];
+let activeUsers = users.filter(user => user.active);
+console.log(activeUsers); // [{ name: "Alice", active: true }, { name: "Charlie", active: true }]
+
+
+/*
+❓ Q3: How can you extract the first three elements of an array without modifying it?
+*/
+let fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+let firstThree = fruits.slice(0, 3);
+console.log(firstThree); // ["Apple", "Banana", "Cherry"]
+console.log(fruits); // ["Apple", "Banana", "Cherry", "Date", "Elderberry"] (unchanged)
+
+
+/*
+❓ Q4: How can you merge two arrays of employee names without modifying the originals?
+*/
+let teamA = ["John", "Jane"];
+let teamB = ["Mike", "Sara"];
+let mergedTeams = teamA.concat(teamB);
+console.log(mergedTeams); // ["John", "Jane", "Mike", "Sara"]
+console.log(teamA); // ["John", "Jane"] (unchanged)
+console.log(teamB); // ["Mike", "Sara"] (unchanged)
+
+
+/*
+❓ Q5: How can you flatten a nested array of user IDs?
+*/
+let userIds = [[101, 102], [103, 104], [105]];
+let flatUserIds = userIds.flat();
+console.log(flatUserIds); // [101, 102, 103, 104, 105]
+
+
+/*
+❓ Q6: How can you transform sentences into individual words in a single step?
+*/
+let sentences6 = ["I love coding", "JavaScript is great"];
+let words6 = sentences6.flatMap(sentence => sentence.split(" "));
+console.log(words6); // ["I", "love", "coding", "JavaScript", "is", "great"]
