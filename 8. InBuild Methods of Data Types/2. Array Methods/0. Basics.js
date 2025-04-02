@@ -32,7 +32,7 @@ Answer. JavaScript provides various array methods that can be categorized as fol
     c. includes()                  => Just checks ( true / false )
 
     
-5. Joining & Conversion Methods :
+5. Convert to string Methods :
 --------------------------------
     a. join(), toString()
 
