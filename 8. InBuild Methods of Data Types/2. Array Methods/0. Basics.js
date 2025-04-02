@@ -34,6 +34,6 @@ Answer. JavaScript provides various array methods that can be categorized as fol
     
 5. Joining & Conversion Methods :
 --------------------------------
-    a. join(), toString(), toLocaleString()
+    a. join(), toString()
 
 */
