@@ -1,5 +1,7 @@
-// 1. Default Parameters
-// Allows setting default values for parameters.
+/*
+1. Default Parameters :
+----------------------
+    Allows setting default values for parameters. */
 
 function greet(name = "Guest") {
   return `Hello, ${name}!`;
@@ -7,9 +9,12 @@ function greet(name = "Guest") {
 console.log(greet()); // Output: "Hello, Guest!"
 console.log(greet("Aman")); // Output: "Hello, Aman!"
 
-// 2. Rest Parameters
-// Allows a function to accept an indefinite number of arguments as an array.
-// Syntax: ...rest
+
+/*
+2. Rest Parameters :
+--------------------
+    a. Allows a function to accept an indefinite number of arguments as an array.
+    b. Syntax: ...rest */
 
 function sum(...numbers) {
   return numbers.reduce((acc, num) => acc + num, 0);

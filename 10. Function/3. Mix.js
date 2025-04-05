@@ -11,7 +11,7 @@ var sum = function(a, b) {
 
 (function(a, b) {
     console.log(a + b);
-  })(5, 7);
+})(5, 7);
   
 // Output: 12
 // Explanation: It’s an Immediately Invoked Function Expression (IIFE).
