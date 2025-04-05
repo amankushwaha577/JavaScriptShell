@@ -12,6 +12,7 @@ In strict mode, attempting to use an undeclared variable throws an error. */
         x = 10; // ReferenceError: x is not defined
 
 
+        
 /*
 2. Assignment to Read-Only Properties :
 ------------------------------------
@@ -51,15 +52,17 @@ Strict mode disallows deleting variables or function names. */
         delete a; // ✅ No error, but doesn't actually delete the variable
 
 
+
 /*
 4. Duplicate Parameter Names :
 ---------------------------------
 Strict mode throws an error for duplicate parameter names in function declarations. */
 
-"use strict";
-function sum(a, a) { // SyntaxError: Duplicate parameter name not allowed
-    return a + a;
-}
+        "use strict";
+        function sum(a, a) { // SyntaxError: Duplicate parameter name not allowed
+            return a + a;
+        }
+
 
 
 /*
