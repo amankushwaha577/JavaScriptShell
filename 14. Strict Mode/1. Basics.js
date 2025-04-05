@@ -12,7 +12,7 @@ In strict mode, attempting to use an undeclared variable throws an error. */
         x = 10; // ReferenceError: x is not defined
 
 
-        
+
 /*
 2. Assignment to Read-Only Properties :
 ------------------------------------
@@ -70,8 +70,8 @@ Strict mode throws an error for duplicate parameter names in function declaratio
 ----------------------------------
 Octal literals (e.g., 012) are not permitted in strict mode. */
 
-"use strict";
-const num = 012; // SyntaxError: Octal literals are not allowed
+        "use strict";
+        const num = 012; // SyntaxError: Octal literals are not allowed
 
 
 
@@ -81,11 +81,11 @@ const num = 012; // SyntaxError: Octal literals are not allowed
 In non-strict mode, this in a function refers to the global object (window in browsers).
 In strict mode, this in a standalone function is undefined. */
 
-"use strict";
-function checkThis() {
-    console.log(this); // Output: undefined
-}
-checkThis();
+        "use strict";
+        function checkThis() {
+            console.log(this); // Output: undefined
+        }
+        checkThis();
 
 
 
@@ -94,6 +94,6 @@ checkThis();
 ----------------------------------
 Strict mode disallows using future reserved keywords as variable names. */
 
-"use strict";
-const let = 10; // SyntaxError: Unexpected strict mode reserved word
+        "use strict";
+        const let = 10; // SyntaxError: Unexpected strict mode reserved word
 
