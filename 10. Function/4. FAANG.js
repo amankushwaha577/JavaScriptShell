@@ -164,7 +164,7 @@ Ans.   Arrow functions don’t bind their own this, so it refers to outer scope.
 
 
 /* 
-Que16. Factorial using recursion */
+Que1. Factorial using recursion */
         function factorial(n) {
             if (n === 0) return 1;
             return n * factorial(n - 1);
@@ -172,7 +172,7 @@ Que16. Factorial using recursion */
 
 
 /* 
-Que17. Counter using closure */
+Que2. Counter using closure */
         function createCounter() {
             let count = 0;
             return function() {
@@ -182,7 +182,7 @@ Que17. Counter using closure */
 
 
 /* 
-Que18. Custom bind implementation */
+Que3. Custom bind implementation */
         Function.prototype.myBind = function(context, ...args1) {
             const fn = this;
             return function(...args2) {
@@ -192,7 +192,7 @@ Que18. Custom bind implementation */
 
 
 /* 
-Que19. Debounce implementation */
+Que4. Debounce implementation */
         function debounce(fn, delay) {
             let timer;
             return function(...args) {
@@ -203,7 +203,7 @@ Que19. Debounce implementation */
 
 
 /* 
-Que20. Throttle implementation */
+Que5. Throttle implementation */
         function throttle(fn, limit) {
             let inThrottle;
             return function(...args) {
@@ -217,7 +217,7 @@ Que20. Throttle implementation */
 
 
 /* 
-Que21. Currying example */
+Que6. Currying example */
         function sum(a) {
             return function(b) {
                 return function(c) {
@@ -229,7 +229,7 @@ Que21. Currying example */
 
 
 /* 
-Que22. Memoize function */
+Que7. Memoize function */
         function memoize(fn) {
             const cache = {};
             return function(n) {
@@ -242,7 +242,7 @@ Que22. Memoize function */
 
 
 /* 
-Que23. Limit function calls */
+Que8. Limit function calls */
         function limitCalls(fn, maxCalls) {
             let calls = 0;
             return function(...args) {
@@ -254,7 +254,7 @@ Que23. Limit function calls */
 
 
 /* 
-Que24. What happens with fewer or extra arguments? */
+Que9. What happens with fewer or extra arguments? */
         function logArgs(a, b) {
             console.log(a, b);
         }
@@ -263,7 +263,7 @@ Que24. What happens with fewer or extra arguments? */
 
 
 /* 
-Que25. How do arrow functions behave with arguments object?
+Que10. How do arrow functions behave with arguments object?
 Ans.   Arrow functions do NOT have their own 'arguments' object. */
         const arrow = () => {
             console.log(arguments); // ReferenceError
@@ -271,12 +271,12 @@ Ans.   Arrow functions do NOT have their own 'arguments' object. */
 
 
 /* 
-Que26. Converting to arrow but keeping behavior?
+Que11. Converting to arrow but keeping behavior?
 Ans.   Only convert when 'this' or 'arguments' is not used. */
 
 
 /* 
-Que27. Rest vs arguments object */
+Que12. Rest vs arguments object */
         function restArgs(...args) {
             return args;
         }
