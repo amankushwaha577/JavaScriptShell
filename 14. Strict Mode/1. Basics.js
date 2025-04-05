@@ -4,9 +4,12 @@
 Without strict mode, variables can be used without var, let, or const, which implicitly declares them as global variables.
 In strict mode, attempting to use an undeclared variable throws an error. */
 
-"use strict";
-x = 10; // ReferenceError: x is not defined
+        // Without strict mode:
+        x = 10;         // ✅ No error, but x becomes a global variable (even if inside a function)
+        console.log(x); // 10
 
+        "use strict";
+        x = 10; // ReferenceError: x is not defined
 
 
 /*
@@ -14,10 +17,23 @@ x = 10; // ReferenceError: x is not defined
 ------------------------------------
 Strict mode throws an error when trying to assign a value to a read-only property. */
 
-"use strict";
-const obj = {};
-Object.defineProperty(obj, "prop", { value: 42, writable: false });
-obj.prop = 77; // TypeError: Cannot assign to read-only property 'prop'
+        // Without strict mode:
+        const obj1 = {};
+        Object.defineProperty(obj1, "fixed", { value: 100, writable: false });
+        obj1.fixed = 200;        // ✅ No error, but the value doesn't change
+        console.log(obj1.fixed); // 100
+
+        // With strict mode:
+        "use strict";
+        const obj = {};
+        Object.defineProperty(obj, "prop", { value: 42, writable: false });
+        obj.prop = 77; // ❌ TypeError: Cannot assign to read-only property 'prop'
+
+        // ✅ Adding new property to object IS allowed in strict mode:
+        const data = {};
+        data.x = 9; // ✅ No error — allowed in strict mode because 'x' is a new property
+        data.x = 9; // ✅ No error — reassigning existing property is also allowed
+        console.log(data); // { x: 9 } Ensure properties meant to be constant are not accidentally reassigned.
 
 
 
@@ -26,9 +42,13 @@ obj.prop = 77; // TypeError: Cannot assign to read-only property 'prop'
 -----------------------------------
 Strict mode disallows deleting variables or function names. */
 
-"use strict";
-let x = 10;
-delete x; // SyntaxError: Delete of an unqualified identifier in strict mode
+        "use strict";
+        let x = 10;
+        delete x; // SyntaxError: Delete of an unqualified identifier in strict mode
+
+        // Without strict mode:
+        var a = 10;
+        delete a; // ✅ No error, but doesn't actually delete the variable
 
 
 /*
