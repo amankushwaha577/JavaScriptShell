@@ -18,7 +18,7 @@ const obj = { x: 10 };
 Object.freeze(obj);
 obj.x = 20;
 console.log(obj.x);   
-// OP: 10
+// OP: TypeError: Cannot assign to read only property 'x' of object
 // Explanation: Object.freeze prevents modifications to the object in strict mode.
 
 
