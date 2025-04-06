@@ -1,7 +1,10 @@
-// 2. for...in vs for...of
-// for...in: Iterates over enumerable keys of an object or array.
-// for...of: Iterates over values of an iterable (e.g., arrays, strings, maps).
+/*
+for...in vs for...of :
+----------------------
+    a. for...in: Iterates over enumerable keys of an object or array.
+    b. for...of: Iterates over values of an iterable (e.g., arrays, strings, maps). */
 
+// For Array :
 const arr = [10, 20, 30];
 
 for (const key in arr) {
@@ -12,6 +15,7 @@ for (const value of arr) {
 }
 
 
+// For Object :
 const obj = { name: "Aman", age: 25, country: "Croatia" };
 
 for (const key in obj) {
@@ -20,10 +24,11 @@ for (const key in obj) {
 for (const value of obj) { 
     console.log(value);  // TypeError: obj is not iterable
 }
-
-// Key Notes:
-// Use for...in for object properties.
-// Use for...of for array values, strings, maps, and sets.
+/*
+Key Notes:
+----------
+    a. Use for...in for object key properties.
+    b. Use for...of for array values, strings, maps, and sets. */
 
 
 // for...of for Objects :
