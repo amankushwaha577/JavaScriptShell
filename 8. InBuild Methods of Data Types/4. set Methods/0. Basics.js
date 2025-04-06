@@ -31,6 +31,7 @@ Answer. JavaScript Map objects come with built-in methods that can be categorize
 --------------
    a. Object.entries(obj) => Can convert an object to a Map using new Map(Object.entries(obj))
    b. Array.from(map)     => Converts a Map to an array of [key, value] pairs.
+   c. Object.fromEntries(map)     => Convert a Map to an Object
 
 
 5. Notes:
