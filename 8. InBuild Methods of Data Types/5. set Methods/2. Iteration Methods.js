@@ -46,6 +46,10 @@
             console.log(key, value);  // red red, green green
         }
 
+        // Spread into array:
+        let entries = [...fruits.entries()];
+        console.log(entries); // [ ["red", "red"],  ["green", "green"] ]
+
 
 
 /*
