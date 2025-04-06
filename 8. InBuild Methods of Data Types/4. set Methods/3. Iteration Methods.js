@@ -40,7 +40,7 @@
     // laptop => 1000
     // phone => 500
 
-    
+
 /*
 4. forEach(callback):
 ----------------------
@@ -67,6 +67,10 @@ const ecommerce = new Map([
 for (let key of ecommerce.keys()) {
     console.log(key);
 }
+// shoes
+// hat
+// jacket
+
 
 /*
 ❓ Q2: How can you extract all prices from a product Map?
@@ -74,6 +78,10 @@ for (let key of ecommerce.keys()) {
 for (let value of ecommerce.values()) {
     console.log(value);
 }
+// 50
+// 20
+// 120
+
 
 /*
 ❓ Q3: How can you print all product details using entries()?
@@ -81,6 +89,10 @@ for (let value of ecommerce.values()) {
 for (let [product, price] of ecommerce.entries()) {
     console.log(`${product}: $${price}`);
 }
+// shoes: $50
+// hat: $20
+// jacket: $120
+
 
 /*
 ❓ Q4: How can you use forEach to apply a discount on each item?
@@ -88,3 +100,6 @@ for (let [product, price] of ecommerce.entries()) {
 ecommerce.forEach((price, item) => {
     console.log(`${item} after discount: $${price * 0.9}`);
 });
+// shoes after discount: $45
+// hat after discount: $18
+// jacket after discount: $108
