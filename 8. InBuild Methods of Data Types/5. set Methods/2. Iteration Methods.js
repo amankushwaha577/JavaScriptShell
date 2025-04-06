@@ -16,6 +16,7 @@
         c. `keys()` is an alias of `values()` in Set (since no keys exist). */
 
         let fruits = new Set(["apple", "banana", "cherry"]);
+        //  fruits.keys() = fruits.values() = SetIterator {'apple', 'banana', 'cherry'}
 
         for (let val of fruits.values()) {
             console.log(val); // apple, banana, cherry
@@ -41,6 +42,7 @@
         c. Useful when destructuring. */
 
         let colors = new Set(["red", "green"]);
+        // colors.entries()   => SetIterator {'apple' => 'apple', 'banana' => 'banana', 'cherry' => 'cherry'}
 
         for (let [key, value] of colors.entries()) {
             console.log(key, value);  // red red, green green
