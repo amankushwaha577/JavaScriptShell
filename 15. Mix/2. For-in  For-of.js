@@ -31,10 +31,12 @@ Key Notes:
     b. Use for...of for array values, strings, maps, and sets. */
 
 
-// for...of for Objects :
-// -----------------------
-// Usage: Cannot be directly used with objects because objects are not iterable by default.
-// If you attempt to use for...of with an object, it throws a TypeError.
+    
+/*
+for...of for Objects :
+-----------------------
+    Usage: Cannot be directly used with objects because objects are not iterable by default.
+    If you attempt to use for...of with an object, it throws a TypeError. */
 
 const obj2 = { name: "Aman", age: 25, country: "Croatia" };
 
