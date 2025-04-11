@@ -1,11 +1,45 @@
 /*
 1. Optional Chaining (?.) :
 --------------------------
-    Safely access deeply nested properties without worrying about errors if a property is undefined or null. */
+    Safely access deeply nested properties without worrying about errors if a property is undefined or null. 
+    
+    🔹 Syntax: object?.property
+    🔹 Can be used with arrays, functions, and nested objects. */
 
-const user = { name: "Alice", address: { city: "Zagreb" } };
-console.log(user.address?.city); // Output: "Zagreb"
-console.log(user.profile?.age); // Output: undefined (no error)
+/* Ex1 – Accessing existing nested property */
+const user1 = { name: "Alice", address: { city: "Zagreb" } };
+console.log(user1.address?.city);  // "Zagreb" ✅
+
+/* Ex2 – Accessing non-existent nested property  */
+console.log(user1.profile?.age);   /* undefined ✅ (no error thrown) 
+
+        a. Access user1.profile:
+        -----------------------
+        user1 exists ✅
+        profile does not exist → undefined
+
+        b. Optional chaining check (?.):
+        -------------------------------
+        Since user1.profile is undefined, JavaScript stops right there ✅
+        undefined?. => Stop✅
+
+        c. It does NOT try to access .age (because that would throw an error normally).
+
+        Result: The expression returns undefined safely (instead of error). */
+
+        
+// Example 3 – Optional chaining with function calls
+const user2 = {
+    greet: () => "Hello"
+};
+
+console.log(user2.greet?.());     // "Hello" ✅
+console.log(user2.sayBye?.());    // undefined ✅ (no error)
+
+// Example 4 – Optional chaining with arrays
+const data = { items: [10, 20, 30] };
+console.log(data.items?.[1]);     // 20 ✅
+console.log(data.list?.[0]);      // undefined ✅ (no error)
 
 
 /* 
